@@ -12,8 +12,6 @@
 <!--</section>-->
 <!--Banner Section Ends-->
 
-<!--Privacy Section Begins-->
-
 <style>
 .gray{
         color: #6E7989;
