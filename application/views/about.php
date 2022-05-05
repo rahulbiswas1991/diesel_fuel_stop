@@ -12,7 +12,7 @@
 <!--</section>-->
 <!--Banner Section Ends-->
 
-<!--Privacy Section Begins-->
+<!--Privacy Section Begins gaurav branch-->
 
 <style>
 .gray{
