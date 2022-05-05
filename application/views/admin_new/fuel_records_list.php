@@ -219,8 +219,6 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                                  <label class="control-label">Date</label>
                                  <input placeholder="createddate" id="createddate" name="createddate" class="form-control" type="text" disabled />
                               </div>
-
-
                               <!-- <div class="col-md-12 form-group user-form-group">
                                  <div class="float-right">
                                     <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
