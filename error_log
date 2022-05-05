@@ -1,0 +1,21 @@
+[29-Dec-2020 05:11:54 UTC] PHP Warning:  Module 'PDO' already loaded in Unknown on line 0
+[29-Dec-2020 05:11:54 UTC] PHP Warning:  Module 'PDO' already loaded in Unknown on line 0
+[29-Dec-2020 05:11:54 UTC] PHP Warning:  Module 'pdo_sqlite' already loaded in Unknown on line 0
+[29-Dec-2020 05:11:54 UTC] PHP Warning:  Module 'pdo_sqlite' already loaded in Unknown on line 0
+[29-Dec-2020 05:11:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'sqlite.so' (tried: /opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so (/opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so: cannot open shared object file: No such file or directory), /opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so.so (/opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so.so: cannot open shared object file: No such file or directory)) in Unknown on line 0
+[29-Dec-2020 05:11:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'sqlite.so' (tried: /opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so (/opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so: cannot open shared object file: No such file or directory), /opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so.so (/opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so.so: cannot open shared object file: No such file or directory)) in Unknown on line 0
+[29-Dec-2020 05:11:54 UTC] PHP Warning:  Module 'pdo_mysql' already loaded in Unknown on line 0
+[29-Dec-2020 05:11:54 UTC] PHP Warning:  Module 'pdo_mysql' already loaded in Unknown on line 0
+[29-Dec-2020 06:06:53 UTC] PHP Warning:  Module 'PDO' already loaded in Unknown on line 0
+[29-Dec-2020 06:06:53 UTC] PHP Warning:  Module 'pdo_sqlite' already loaded in Unknown on line 0
+[29-Dec-2020 06:06:53 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'sqlite.so' (tried: /opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so (/opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so: cannot open shared object file: No such file or directory), /opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so.so (/opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so.so: cannot open shared object file: No such file or directory)) in Unknown on line 0
+[29-Dec-2020 06:06:53 UTC] PHP Warning:  Module 'pdo_mysql' already loaded in Unknown on line 0
+[29-Dec-2020 06:44:04 UTC] PHP Warning:  Module 'PDO' already loaded in Unknown on line 0
+[29-Dec-2020 06:44:04 UTC] PHP Warning:  Module 'pdo_sqlite' already loaded in Unknown on line 0
+[29-Dec-2020 06:44:04 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'sqlite.so' (tried: /opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so (/opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so: cannot open shared object file: No such file or directory), /opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so.so (/opt/cpanel/ea-php72/root/usr/lib64/php/modules/sqlite.so.so: cannot open shared object file: No such file or directory)) in Unknown on line 0
+[29-Dec-2020 06:44:04 UTC] PHP Warning:  Module 'pdo_mysql' already loaded in Unknown on line 0
+[26-Jun-2021 16:17:15 Asia/kolkata] PHP Fatal error:  Can't use function return value in write context in /home/b0ll7bmn2fo9/public_html/diesel_stop/application/controllers/Api.php on line 1046
+[26-Jun-2021 16:17:17 Asia/kolkata] PHP Fatal error:  Can't use function return value in write context in /home/b0ll7bmn2fo9/public_html/diesel_stop/application/controllers/Api.php on line 1046
+[26-Jun-2021 16:17:32 Asia/kolkata] PHP Fatal error:  Can't use function return value in write context in /home/b0ll7bmn2fo9/public_html/diesel_stop/application/controllers/Api.php on line 1046
+[26-Jun-2021 16:17:50 Asia/kolkata] PHP Fatal error:  Can't use function return value in write context in /home/b0ll7bmn2fo9/public_html/diesel_stop/application/controllers/Api.php on line 1046
+[26-Jun-2021 16:18:29 Asia/kolkata] PHP Fatal error:  Can't use function return value in write context in /home/b0ll7bmn2fo9/public_html/diesel_stop/application/controllers/Api.php on line 1046

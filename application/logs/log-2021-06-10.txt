@@ -1,0 +1,66 @@
+INFO - 2021-06-10 01:53:02 --> Config Class Initialized
+INFO - 2021-06-10 01:53:02 --> Hooks Class Initialized
+DEBUG - 2021-06-10 01:53:02 --> UTF-8 Support Enabled
+INFO - 2021-06-10 01:53:02 --> Utf8 Class Initialized
+INFO - 2021-06-10 01:53:02 --> URI Class Initialized
+INFO - 2021-06-10 01:53:02 --> Router Class Initialized
+INFO - 2021-06-10 01:53:02 --> Output Class Initialized
+INFO - 2021-06-10 01:53:02 --> Security Class Initialized
+DEBUG - 2021-06-10 01:53:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-06-10 01:53:02 --> Input Class Initialized
+INFO - 2021-06-10 01:53:02 --> Language Class Initialized
+INFO - 2021-06-10 01:53:02 --> Loader Class Initialized
+INFO - 2021-06-10 01:53:02 --> Controller Class Initialized
+INFO - 2021-06-10 01:53:03 --> Database Driver Class Initialized
+INFO - 2021-06-10 01:53:03 --> Model "admin_modal" initialized
+INFO - 2021-06-10 01:53:03 --> Model "common_model" initialized
+INFO - 2021-06-10 01:53:03 --> Model "user_model" initialized
+INFO - 2021-06-10 01:53:03 --> Helper loaded: url_helper
+INFO - 2021-06-10 01:53:03 --> Helper loaded: date_helper
+INFO - 2021-06-10 01:53:03 --> Helper loaded: form_helper
+INFO - 2021-06-10 01:53:03 --> Helper loaded: string_helper
+INFO - 2021-06-10 01:53:03 --> Helper loaded: comman_helper
+INFO - 2021-06-10 01:53:03 --> Email Class Initialized
+INFO - 2021-06-10 01:53:03 --> Jquery Class Initialized
+INFO - 2021-06-10 01:53:03 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-06-10 01:53:03 --> Session: Class initialized using 'files' driver.
+INFO - 2021-06-10 01:53:03 --> Upload Class Initialized
+DEBUG - 2021-06-10 01:53:03 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-06-10 01:53:03 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-06-10 01:53:03 --> Encryption Class Initialized
+INFO - 2021-06-10 01:53:03 --> User Agent Class Initialized
+INFO - 2021-06-10 01:53:03 --> Final output sent to browser
+DEBUG - 2021-06-10 01:53:03 --> Total execution time: 1.1210
+INFO - 2021-06-10 01:53:17 --> Config Class Initialized
+INFO - 2021-06-10 01:53:17 --> Hooks Class Initialized
+DEBUG - 2021-06-10 01:53:17 --> UTF-8 Support Enabled
+INFO - 2021-06-10 01:53:17 --> Utf8 Class Initialized
+INFO - 2021-06-10 01:53:17 --> URI Class Initialized
+INFO - 2021-06-10 01:53:17 --> Router Class Initialized
+INFO - 2021-06-10 01:53:17 --> Output Class Initialized
+INFO - 2021-06-10 01:53:17 --> Security Class Initialized
+DEBUG - 2021-06-10 01:53:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-06-10 01:53:17 --> Input Class Initialized
+INFO - 2021-06-10 01:53:17 --> Language Class Initialized
+INFO - 2021-06-10 01:53:17 --> Loader Class Initialized
+INFO - 2021-06-10 01:53:17 --> Controller Class Initialized
+INFO - 2021-06-10 01:53:17 --> Database Driver Class Initialized
+INFO - 2021-06-10 01:53:17 --> Model "admin_modal" initialized
+INFO - 2021-06-10 01:53:17 --> Model "common_model" initialized
+INFO - 2021-06-10 01:53:17 --> Model "user_model" initialized
+INFO - 2021-06-10 01:53:17 --> Helper loaded: url_helper
+INFO - 2021-06-10 01:53:17 --> Helper loaded: date_helper
+INFO - 2021-06-10 01:53:17 --> Helper loaded: form_helper
+INFO - 2021-06-10 01:53:17 --> Helper loaded: string_helper
+INFO - 2021-06-10 01:53:17 --> Helper loaded: comman_helper
+INFO - 2021-06-10 01:53:17 --> Email Class Initialized
+INFO - 2021-06-10 01:53:17 --> Jquery Class Initialized
+INFO - 2021-06-10 01:53:17 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-06-10 01:53:17 --> Session: Class initialized using 'files' driver.
+INFO - 2021-06-10 01:53:17 --> Upload Class Initialized
+DEBUG - 2021-06-10 01:53:17 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-06-10 01:53:17 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-06-10 01:53:17 --> Encryption Class Initialized
+INFO - 2021-06-10 01:53:17 --> User Agent Class Initialized
+INFO - 2021-06-10 01:53:17 --> Final output sent to browser
+DEBUG - 2021-06-10 01:53:17 --> Total execution time: 0.0426

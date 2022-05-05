@@ -1,0 +1,186 @@
+/*userdetails page css*/
+.form{
+float: left;
+width: 100%;
+margin-bottom:0;    
+}
+.personal-info {
+  margin: 0 0 15px;
+    padding: 0 0 15px;
+    float: left;
+    width: 100%;
+    background: #eee;
+}
+.personal-info h2 {
+    margin: 0;
+    padding: 0 0 15px;
+    font-size: 15px;
+    color: #578ebe;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+hr.line {
+    margin-bottom: 15px;
+        margin-top: 0;
+    padding: 0;
+    border: 1px solid #e1e1e1;
+}
+.form-group.custom {
+    margin-bottom: 15px;
+}
+.form-group.custom input {
+    border-radius: 0;
+    height: 34px;
+    padding: 6px 12px;
+    border: 1px solid #c2cad8;
+    outline: 0;
+    box-shadow: none;
+}
+.form-group.custom label.control-label{
+font-weight: 400;    
+}
+.form-group.custom select.form-control {
+    border-radius: 0;
+    height: 34px;
+    padding: 6px 12px;
+    border: 1px solid #c2cad8;
+    outline: 0;
+    box-shadow: none;
+}
+button.btn.update {
+    background-color: #26a1ab;
+    border-color: #2499a3;
+    color: #fff;
+    float: right;
+    border-radius: 0;
+}
+.kyc-id{
+    border: 1px solid #bbb;
+    padding: 10px;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+.radio-custom {
+        margin: 0 0 14px;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    width: 100%;
+}
+.radio-custom label{
+    font-weight: 400;
+    vertical-align: middle;
+    padding: 0;
+    margin: 3px 7px 0;    
+}
+.radio-custom input[type="radio"]{
+    vertical-align: middle;  
+} 
+.kyc-id img {
+    width: 100%;
+}
+.portlet.light.bordered {
+    border: 1px solid #e7ecf1 !important;
+    float: left;
+    width: 100%;
+    padding: 0;
+}
+section.form.top {
+    margin-bottom: 15px;
+} 
+.main-id {
+    padding: 0 70px;
+}
+span.disableinput {
+    padding: 6px 12px;
+    border: 1px solid #c2cad8;
+    width: 100%;
+    float: left;
+    height: 34px;
+    background: red;
+    color: #8e8e8e;
+    font-size: 14px;
+    background-color: #eef1f5;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    opacity: 1;
+    line-height: 1.42857; 
+}
+button.btn.approve {
+    background: #28a745;
+    color: #fff;
+    font-weight: 600;
+    margin: 9px 10px 0;
+}
+button.btn.reject {
+    background: #dc3545;
+    color: #fff;
+    font-weight: 600;
+    margin: 9px 0 0;
+}
+.account-box {
+    margin: 0;
+}
+
+/*userdetails page css ends*/
+
+.paids_user_title h4 {
+    font-weight: 600;
+    color: #66667d;
+}
+/*new css add*/
+.page-sidebar .page-sidebar-menu>li>a{
+    font-weight: 300;
+    color: #ffffff !important;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+.page-title {
+    font-weight: 500 !important;
+}
+.portlet.light.bordered{
+padding: 10px 20px;    
+}
+.page-sidebar .page-sidebar-menu>li.heading>h3 {
+    font-weight: 500;
+}
+.label.label-sm {
+    padding: 1px 5px;
+    font-weight: 500;
+}
+#total-purchase .modal-dialog {
+    max-width: 500px;
+}
+.widget-thumb {
+    padding: 10px !important;
+}
+.page-content {
+    background: #fff !important;
+}
+.userpro {
+    background: #eef1f5 !important;
+}
+.portlet.light {
+    border: 1px solid #e7ecf1;
+}
+.select2-container--default .select2-selection--single {
+    padding: 6px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 22px !important;
+}
+.profile-usertitle-job {
+    font-weight: 600 !important;
+}
+.profile-usertitle-name {
+    font-weight: 500 !important;
+}
+/*new css add*/
+
+
+@media screen and (max-width:480px){
+    .main-id {
+    padding: 0 0;
+}
+}

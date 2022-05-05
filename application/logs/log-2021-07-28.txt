@@ -1,0 +1,136 @@
+INFO - 2021-07-28 06:57:45 --> Config Class Initialized
+INFO - 2021-07-28 06:57:45 --> Hooks Class Initialized
+INFO - 2021-07-28 06:57:45 --> Config Class Initialized
+INFO - 2021-07-28 06:57:45 --> Hooks Class Initialized
+DEBUG - 2021-07-28 06:57:45 --> UTF-8 Support Enabled
+INFO - 2021-07-28 06:57:45 --> Utf8 Class Initialized
+DEBUG - 2021-07-28 06:57:45 --> UTF-8 Support Enabled
+INFO - 2021-07-28 06:57:45 --> Utf8 Class Initialized
+INFO - 2021-07-28 06:57:45 --> URI Class Initialized
+INFO - 2021-07-28 06:57:45 --> URI Class Initialized
+INFO - 2021-07-28 06:57:45 --> Router Class Initialized
+INFO - 2021-07-28 06:57:45 --> Router Class Initialized
+INFO - 2021-07-28 06:57:45 --> Output Class Initialized
+INFO - 2021-07-28 06:57:45 --> Output Class Initialized
+INFO - 2021-07-28 06:57:45 --> Security Class Initialized
+INFO - 2021-07-28 06:57:45 --> Security Class Initialized
+DEBUG - 2021-07-28 06:57:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-07-28 06:57:45 --> Input Class Initialized
+DEBUG - 2021-07-28 06:57:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-07-28 06:57:45 --> Input Class Initialized
+INFO - 2021-07-28 06:57:45 --> Language Class Initialized
+INFO - 2021-07-28 06:57:45 --> Language Class Initialized
+INFO - 2021-07-28 06:57:45 --> Loader Class Initialized
+INFO - 2021-07-28 06:57:45 --> Loader Class Initialized
+INFO - 2021-07-28 06:57:45 --> Controller Class Initialized
+INFO - 2021-07-28 06:57:45 --> Controller Class Initialized
+INFO - 2021-07-28 06:57:45 --> Database Driver Class Initialized
+INFO - 2021-07-28 06:57:45 --> Database Driver Class Initialized
+INFO - 2021-07-28 06:57:46 --> Model "admin_modal" initialized
+INFO - 2021-07-28 06:57:46 --> Model "common_model" initialized
+INFO - 2021-07-28 06:57:46 --> Model "user_model" initialized
+INFO - 2021-07-28 06:57:46 --> Model "admin_modal" initialized
+INFO - 2021-07-28 06:57:46 --> Model "common_model" initialized
+INFO - 2021-07-28 06:57:46 --> Model "user_model" initialized
+INFO - 2021-07-28 06:57:46 --> Model "Notificationmodel" initialized
+INFO - 2021-07-28 06:57:46 --> Model "Notificationmodel" initialized
+INFO - 2021-07-28 06:57:46 --> Helper loaded: url_helper
+INFO - 2021-07-28 06:57:46 --> Helper loaded: url_helper
+INFO - 2021-07-28 06:57:46 --> Helper loaded: date_helper
+INFO - 2021-07-28 06:57:46 --> Helper loaded: date_helper
+INFO - 2021-07-28 06:57:46 --> Helper loaded: form_helper
+INFO - 2021-07-28 06:57:46 --> Helper loaded: form_helper
+INFO - 2021-07-28 06:57:46 --> Helper loaded: string_helper
+INFO - 2021-07-28 06:57:46 --> Helper loaded: string_helper
+INFO - 2021-07-28 06:57:46 --> Helper loaded: comman_helper
+INFO - 2021-07-28 06:57:46 --> Helper loaded: comman_helper
+INFO - 2021-07-28 06:57:46 --> Email Class Initialized
+INFO - 2021-07-28 06:57:46 --> Email Class Initialized
+INFO - 2021-07-28 06:57:46 --> Jquery Class Initialized
+INFO - 2021-07-28 06:57:46 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-07-28 06:57:46 --> Jquery Class Initialized
+INFO - 2021-07-28 06:57:46 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-07-28 06:57:46 --> Session: Class initialized using 'files' driver.
+INFO - 2021-07-28 06:57:46 --> Upload Class Initialized
+INFO - 2021-07-28 06:57:46 --> Session: Class initialized using 'files' driver.
+INFO - 2021-07-28 06:57:46 --> Upload Class Initialized
+DEBUG - 2021-07-28 06:57:46 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-07-28 06:57:46 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-07-28 06:57:46 --> Encryption Class Initialized
+DEBUG - 2021-07-28 06:57:46 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-07-28 06:57:46 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-07-28 06:57:46 --> Encryption Class Initialized
+INFO - 2021-07-28 06:57:46 --> User Agent Class Initialized
+INFO - 2021-07-28 06:57:46 --> User Agent Class Initialized
+INFO - 2021-07-28 06:57:46 --> Final output sent to browser
+DEBUG - 2021-07-28 06:57:46 --> Total execution time: 1.5300
+INFO - 2021-07-28 06:57:46 --> Final output sent to browser
+DEBUG - 2021-07-28 06:57:46 --> Total execution time: 1.5451
+INFO - 2021-07-28 06:57:57 --> Config Class Initialized
+INFO - 2021-07-28 06:57:57 --> Hooks Class Initialized
+DEBUG - 2021-07-28 06:57:57 --> UTF-8 Support Enabled
+INFO - 2021-07-28 06:57:57 --> Utf8 Class Initialized
+INFO - 2021-07-28 06:57:57 --> URI Class Initialized
+INFO - 2021-07-28 06:57:57 --> Router Class Initialized
+INFO - 2021-07-28 06:57:57 --> Output Class Initialized
+INFO - 2021-07-28 06:57:57 --> Security Class Initialized
+DEBUG - 2021-07-28 06:57:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-07-28 06:57:57 --> Input Class Initialized
+INFO - 2021-07-28 06:57:57 --> Language Class Initialized
+INFO - 2021-07-28 06:57:57 --> Loader Class Initialized
+INFO - 2021-07-28 06:57:57 --> Controller Class Initialized
+INFO - 2021-07-28 06:57:57 --> Config Class Initialized
+INFO - 2021-07-28 06:57:57 --> Hooks Class Initialized
+DEBUG - 2021-07-28 06:57:57 --> UTF-8 Support Enabled
+INFO - 2021-07-28 06:57:57 --> Utf8 Class Initialized
+INFO - 2021-07-28 06:57:57 --> URI Class Initialized
+INFO - 2021-07-28 06:57:57 --> Router Class Initialized
+INFO - 2021-07-28 06:57:57 --> Output Class Initialized
+INFO - 2021-07-28 06:57:57 --> Security Class Initialized
+DEBUG - 2021-07-28 06:57:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-07-28 06:57:57 --> Input Class Initialized
+INFO - 2021-07-28 06:57:57 --> Language Class Initialized
+INFO - 2021-07-28 06:57:57 --> Loader Class Initialized
+INFO - 2021-07-28 06:57:57 --> Controller Class Initialized
+INFO - 2021-07-28 06:57:57 --> Database Driver Class Initialized
+INFO - 2021-07-28 06:57:57 --> Database Driver Class Initialized
+INFO - 2021-07-28 06:57:57 --> Model "admin_modal" initialized
+INFO - 2021-07-28 06:57:57 --> Model "common_model" initialized
+INFO - 2021-07-28 06:57:57 --> Model "user_model" initialized
+INFO - 2021-07-28 06:57:57 --> Model "Notificationmodel" initialized
+INFO - 2021-07-28 06:57:57 --> Helper loaded: url_helper
+INFO - 2021-07-28 06:57:57 --> Helper loaded: date_helper
+INFO - 2021-07-28 06:57:57 --> Helper loaded: form_helper
+INFO - 2021-07-28 06:57:57 --> Helper loaded: string_helper
+INFO - 2021-07-28 06:57:57 --> Helper loaded: comman_helper
+INFO - 2021-07-28 06:57:57 --> Email Class Initialized
+INFO - 2021-07-28 06:57:57 --> Jquery Class Initialized
+INFO - 2021-07-28 06:57:57 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-07-28 06:57:57 --> Model "admin_modal" initialized
+INFO - 2021-07-28 06:57:57 --> Model "common_model" initialized
+INFO - 2021-07-28 06:57:57 --> Model "user_model" initialized
+INFO - 2021-07-28 06:57:57 --> Model "Notificationmodel" initialized
+INFO - 2021-07-28 06:57:57 --> Helper loaded: url_helper
+INFO - 2021-07-28 06:57:57 --> Helper loaded: date_helper
+INFO - 2021-07-28 06:57:57 --> Helper loaded: form_helper
+INFO - 2021-07-28 06:57:57 --> Helper loaded: string_helper
+INFO - 2021-07-28 06:57:57 --> Helper loaded: comman_helper
+INFO - 2021-07-28 06:57:57 --> Email Class Initialized
+INFO - 2021-07-28 06:57:57 --> Jquery Class Initialized
+INFO - 2021-07-28 06:57:57 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-07-28 06:57:57 --> Session: Class initialized using 'files' driver.
+INFO - 2021-07-28 06:57:57 --> Upload Class Initialized
+DEBUG - 2021-07-28 06:57:57 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-07-28 06:57:57 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-07-28 06:57:57 --> Encryption Class Initialized
+INFO - 2021-07-28 06:57:57 --> Session: Class initialized using 'files' driver.
+INFO - 2021-07-28 06:57:57 --> Upload Class Initialized
+DEBUG - 2021-07-28 06:57:57 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-07-28 06:57:57 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-07-28 06:57:57 --> Encryption Class Initialized
+INFO - 2021-07-28 06:57:57 --> User Agent Class Initialized
+INFO - 2021-07-28 06:57:57 --> User Agent Class Initialized
+INFO - 2021-07-28 06:57:57 --> Final output sent to browser
+DEBUG - 2021-07-28 06:57:57 --> Total execution time: 0.0720
+INFO - 2021-07-28 06:57:57 --> Final output sent to browser
+DEBUG - 2021-07-28 06:57:57 --> Total execution time: 0.0994

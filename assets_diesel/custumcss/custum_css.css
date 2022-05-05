@@ -1,0 +1,9 @@
+.pagination > li.page {
+    border: 1px solid;
+    padding: 4px 8px 4px 8px;
+}
+
+.pagination > li.active {
+    border: 1px solid;
+    background: #009688;
+}

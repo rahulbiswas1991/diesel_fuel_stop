@@ -1,0 +1,18 @@
+/* payment package classes */
+.package-payment-item h2 { color:#fff; font-weight:600; font-size:26px; position:relative; padding-bottom:20px;}
+.package-payment-item h6 { color:#fff; font-size:20px; font-weight:500;}
+.package-wallet {background: -moz-linear-gradient(top, #80a98a 0%, #009ebf 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #80a98a 0%,#009ebf 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #80a98a 0%,#009ebf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80a98a', endColorstr='#009ebf',GradientType=0 );}
+.package-request {background: -moz-linear-gradient(top, #969fdf 0%, #3f619e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #969fdf 0%,#3f619e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #969fdf 0%,#3f619e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#969fdf', endColorstr='#3f619e',GradientType=0 );}
+.package-payment-item {padding:10px; border-radius:10px !important; text-align:center;}
+.package-payment-content ul {padding-left:0; list-style:none; text-align:center;}
+.pay-btn {padding:20px;}
+.pay-btn .orange-button {width:132px;}
+.package-payment-content ul li {padding:30px 15px; display:inline-block; float:none; margin:-2px;}
+.package-payment-item i {display:inline-block; margin-top:10px;}
+.package-payment-item h2:after {content:""; position:absolute; left:76px; right:76px; height:1px; background-color:#fff; bottom:0;}
