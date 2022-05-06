@@ -2043,6 +2043,7 @@ $(".adlead_popup").click(function(e) {
    // alert("aaaa"); 
    // $('#adedit_lead').modal('show'); die();
     var a = $(this).attr('data-ref');
+
     if(a > '0'){
      
             $.ajax({
@@ -2052,15 +2053,19 @@ $(".adlead_popup").click(function(e) {
                 dataType: "json",
                 success: function(data) {
             //        toastr.clear();
-           //        alert(data); die();
                     if (data.status == 1) {
                         
-                        $('#lead_name').val(data.data.name);
-                        $('#company_name').val(data.data.company_name);
-                        $('#phone').val(data.data.phone);
-                        $('#email').val(data.data.email);
-                        $('#city').val(data.data.city);
-                        $('#designation').val(data.data.designation);
+                        $('#user_name').val(data.data[0].user_name);
+                        $('#lead_name').val(data.data[0].lead_name);
+                        $('#company_name').val(data.data[0].company_name);
+                        $('#phone').val(data.data[0].lead_phone);
+                        $('#email').val(data.data[0].lead_email);
+                        $('#street').val(data.data[0].lead_street);
+                        $('#city').val(data.data[0].lead_city);
+                        $('#state').val(data.data[0].lead_state);
+                        $('#zip_code').val(data.data[0].lead_zip_code);
+                        $('#total_trucks').val(data.data[0].lead_total_trucks);
+                        $('#potential_gallons').val(data.data[0].lead_potential_gallons);
                         
                     //    $('#status').val(data.data.status);
                         

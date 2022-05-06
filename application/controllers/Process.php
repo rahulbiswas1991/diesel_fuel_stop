@@ -80,9 +80,11 @@ class Process extends CI_Controller
     }
 	 public function lead_details()
     {
-        $bank = $this->common_model->get_data("leads", " AND id=" . $_POST['ref'], "*", "1");
+        $this->load->model("Admin_modal");
+        $id = $_POST['ref']; 
+        $bank = $this->admin_modal->get_lead_by_id($id);
         if (!empty($bank)) {
-            echo json_encode(array('status' => 1, 'data' => $bank));
+            echo json_encode(array('status' => 1, 'data' => $bank->result_array()));
         } else {
             echo json_encode(array('status' => 0));
         }

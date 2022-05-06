@@ -316,6 +316,10 @@ $path = base_url();
                            <div class="row">
                               <!-- Text input-->
                               <div class="col-md-6 form-group">
+                                 <label class="control-label">Agent Info:</label>
+                                 <input placeholder="User Name" id="user_name" name="user_name" class="form-control" type="text" required />
+                              </div>
+                              <div class="col-md-6 form-group">
                                  <label class="control-label">Lead Name:</label>
                                  <input placeholder="Lead Name" id="lead_name" name="lead_name" class="form-control" type="text" required />
                               </div>
@@ -335,17 +339,33 @@ $path = base_url();
                                  <input placeholder="Phone" id="phone" name="phone" class="form-control" type="text" required />
                               </div>
                               <div class="col-md-6 form-group">
+                                 <label class="control-label">Street</label>
+                                 <input placeholder="Street" id="street" name="street" class="form-control" type="text" required />
+                              </div>                              
+                              <div class="col-md-6 form-group">
                                  <label class="control-label">City</label>
                                  <input placeholder="City" id="city" name="city" class="form-control" type="text" required />
-                              </div>
+                              </div>                              
                               <div class="col-md-6 form-group">
-                                 <label class="control-label">Designation</label>
-                                 <input placeholder="Designation...." id="designation" name="designation" class="form-control" type="text" required />
-                              </div>
+                                 <label class="control-label">State</label>
+                                 <input placeholder="State" id="state" name="state" class="form-control" type="text" required />
+                              </div>                              
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">Zip code</label>
+                                 <input placeholder="Zip code" id="zip_code" name="zip_code" class="form-control" type="text" required />
+                              </div>                              
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">Total trucks</label>
+                                 <input placeholder="Total trucks" id="total_trucks" name="total_trucks" class="form-control" type="text" required />
+                              </div>                              
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">potential gallons</label>
+                                 <input placeholder="potential_gallons" id="potential_gallons" name="potential_gallons" class="form-control" type="text" required />
+                              </div>                              
 
                               <div class="col-md-6 form-group">
                                  <label class="control-label">Current Status</label>
-                                 <select class="form-control" id="lead_status" name="lead_status" required />
+                                 <select class="form-control" id="lead_status" name="lead_status" required >
                                  <option value="0"> IN Process</option>
                                  <option value="1">Complete</option>
                                  <option value="2">Cancelled</option>
