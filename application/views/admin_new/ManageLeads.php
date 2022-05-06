@@ -311,10 +311,14 @@ $path = base_url();
                      <div class="col-md-12">
                         <!--<form class="form-horizontal">-->
                         <form class="form-horizontal" method="post" id="edlead_delsfrm" data-action="<?= base_url() ?>process/adupdate_lead">
-                           <input type="hidden" value="" id="lead_ref" name="lead_ref">
+                           <input type="hidden" value="" id="lead_ref_id" name="lead_ref_id">
                            <input type="hidden" value="" id="b_user_id" name="b_user_id">
                            <div class="row">
                               <!-- Text input-->
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">Agent ID:</label>
+                                 <input placeholder="User Name" id="user_id" name="user_id" class="form-control" type="text" required />
+                              </div>
                               <div class="col-md-6 form-group">
                                  <label class="control-label">Lead Name:</label>
                                  <input placeholder="Lead Name" id="lead_name" name="lead_name" class="form-control" type="text" required />
@@ -326,7 +330,7 @@ $path = base_url();
                               </div>
 
                               <div class="col-md-6 form-group">
-                                 <label class="control-label">Email</label>
+                                 <label class="control-label">Company Email</label>
                                  <input placeholder="Email" id="email" name="email" class="form-control" type="text" required />
                               </div>
                               <!-- Text input-->
@@ -335,17 +339,37 @@ $path = base_url();
                                  <input placeholder="Phone" id="phone" name="phone" class="form-control" type="text" required />
                               </div>
                               <div class="col-md-6 form-group">
-                                 <label class="control-label">City</label>
-                                 <input placeholder="City" id="city" name="city" class="form-control" type="text" required />
+                                 <label class="control-label">DOT No</label>
+                                 <input placeholder="DOT number" id="DOT_number" name="DOT_number" class="form-control" type="text" required />
                               </div>
                               <div class="col-md-6 form-group">
-                                 <label class="control-label">Designation</label>
-                                 <input placeholder="Designation...." id="designation" name="designation" class="form-control" type="text" required />
-                              </div>
+                                 <label class="control-label">Street</label>
+                                 <input placeholder="Street" id="street" name="street" class="form-control" type="text" required />
+                              </div>                              
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">City</label>
+                                 <input placeholder="City" id="city" name="city" class="form-control" type="text" required />
+                              </div>                              
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">State</label>
+                                 <input placeholder="State" id="state" name="state" class="form-control" type="text" required />
+                              </div>                              
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">Zip code</label>
+                                 <input placeholder="Zip code" id="zip_code" name="zip_code" class="form-control" type="text" required />
+                              </div>                             
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">Total trucks</label>
+                                 <input placeholder="Total trucks" id="total_trucks" name="total_trucks" class="form-control" type="text" required />
+                              </div>                              
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">potential gallons</label>
+                                 <input placeholder="potential_gallons" id="potential_gallons" name="potential_gallons" class="form-control" type="text" required />
+                              </div>                              
 
                               <div class="col-md-6 form-group">
                                  <label class="control-label">Current Status</label>
-                                 <select class="form-control" id="lead_status" name="lead_status" required />
+                                 <select class="form-control" id="lead_status" name="lead_status" required >
                                  <option value="0"> IN Process</option>
                                  <option value="1">Complete</option>
                                  <option value="2">Cancelled</option>

@@ -2043,6 +2043,7 @@ $(".adlead_popup").click(function(e) {
    // alert("aaaa"); 
    // $('#adedit_lead').modal('show'); die();
     var a = $(this).attr('data-ref');
+
     if(a > '0'){
      
             $.ajax({
@@ -2052,21 +2053,25 @@ $(".adlead_popup").click(function(e) {
                 dataType: "json",
                 success: function(data) {
             //        toastr.clear();
-           //        alert(data); die();
                     if (data.status == 1) {
                         
-                        $('#lead_name').val(data.data.name);
-                        $('#company_name').val(data.data.company_name);
-                        $('#phone').val(data.data.phone);
-                        $('#email').val(data.data.email);
-                        $('#city').val(data.data.city);
-                        $('#designation').val(data.data.designation);
+                        $('#user_id').val(data.data[0].user_id);
+                        $('#lead_ref_id').val(data.data[0].lead_id);
+                        $('#lead_name').val(data.data[0].lead_name);
+                        $('#company_name').val(data.data[0].company_name);
+                        $('#phone').val(data.data[0].lead_phone);
+                        $('#DOT_number').val(data.data[0].lead_dot_number);
+                        $('#email').val(data.data[0].lead_mail);
+                        $('#street').val(data.data[0].lead_street);
+                        $('#city').val(data.data[0].lead_city);
+                        $('#state').val(data.data[0].lead_state);
+                        $('#zip_code').val(data.data[0].lead_zip_code);
+                        $('#total_trucks').val(data.data[0].lead_total_trucks);
+                        $('#potential_gallons').val(data.data[0].lead_potential_gallons);
                         
                     //    $('#status').val(data.data.status);
                         
-                        $('#lead_ref').val(data.data.id);
-                        
-                        $('#b_user_id').val(data.data.user_id);
+                        $('#b_user_id').val(data.data[0].user_id);
                         
                         
                          var options = document.getElementById("lead_status").options;
@@ -2074,7 +2079,7 @@ $(".adlead_popup").click(function(e) {
                             
                             
                       //     alert(options[1].value); die();
-                          var sts = data.data.status;  
+                          var sts = data.data[0].status;  
                             
                           if (options[i].value == sts) {
                             options[i].selected = true;

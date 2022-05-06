@@ -442,8 +442,7 @@ function randomPassword() {
         $data["pagination"] = $this->pagination->create_links();
         $data['row'] = $rowno;
         #echo "<pre>"; print_r($data); die();
-        $data['history'] = $this->admin_modal->Allleads('', $rowno, $rowperpage, $search);
-        #echo $this->db->last_query(); die;
+        $data['history'] = $this->admin_modal->Allleads('', $rowno, $rowperpage, $search);        
         $this->load->view('admin_new/ManageLeads.php',$data);
         $this->load->view('admin_new/footer.php');
     }
@@ -685,34 +684,15 @@ function randomPassword() {
                     if(count($checkdata) > 0){
                         
                     }else{
-                         $lead[$i]['carrier_name'] = $carrier_name;
-                         $lead[$i]['company'] = $company;
-                         $lead[$i]['billing_card'] = $billing_card;
-                         $lead[$i]['acct'] = $acct;
-                         $lead[$i]['pfj_ascend'] = $pfj_ascend;
-                         $lead[$i]['acct_type'] = $acct_type;
-                         $lead[$i]['lead_gallons'] = $lead_gallons;
-                         $lead[$i]['share_per'] = $shareper;
-                         $lead[$i]['total_share'] =  $total_share;
-                         $lead[$i]['isactive'] = 1;
-                         $lead[$i]['created_date']= date('Y-m-d H:i:s');
+                         $lead[$i]['photo'] = $photo;
+                         $lead[$i]['agent_name'] = $agent_name;
+                         $lead[$i]['emp_id'] = $emp_id;
                          $i++;
-                        
-                        $rec++;
                    }
              }
 			}             
-                             
-                            //  echo "<pre>"; print_r($fuel); die();
-                            //  echo "<pre>"; print_r($fuel_share); die();
-                            if(count($fuel) > 0 && count($fuel_share) > 0){
-                                
-                           
-                             
-                                $roiCount = $this->common_model->insertBatch('diesel_fuel_records', $fuel);
-                                if(count($fuel_share) > 0){
-                                     $roiCountreward = $this->common_model->insertBatch('rewards', $fuel_share);
-                                }
+                            if(count($lead) > 0){
+                                $roiCount = $this->common_model->insertBatch('diesel_fuel_records', $lead);
                                 
                                 if($roiCount){
                                     $this->session->set_flashdata('success', 'Sheet Upload Successfully'); //die();
