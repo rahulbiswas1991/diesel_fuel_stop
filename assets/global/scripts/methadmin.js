@@ -2055,11 +2055,13 @@ $(".adlead_popup").click(function(e) {
             //        toastr.clear();
                     if (data.status == 1) {
                         
-                        $('#user_name').val(data.data[0].user_name);
+                        $('#user_id').val(data.data[0].user_id);
+                        $('#lead_ref_id').val(data.data[0].lead_id);
                         $('#lead_name').val(data.data[0].lead_name);
                         $('#company_name').val(data.data[0].company_name);
                         $('#phone').val(data.data[0].lead_phone);
-                        $('#email').val(data.data[0].lead_email);
+                        $('#DOT_number').val(data.data[0].lead_dot_number);
+                        $('#email').val(data.data[0].lead_mail);
                         $('#street').val(data.data[0].lead_street);
                         $('#city').val(data.data[0].lead_city);
                         $('#state').val(data.data[0].lead_state);
@@ -2069,9 +2071,7 @@ $(".adlead_popup").click(function(e) {
                         
                     //    $('#status').val(data.data.status);
                         
-                        $('#lead_ref').val(data.data.id);
-                        
-                        $('#b_user_id').val(data.data.user_id);
+                        $('#b_user_id').val(data.data[0].user_id);
                         
                         
                          var options = document.getElementById("lead_status").options;
@@ -2079,7 +2079,7 @@ $(".adlead_popup").click(function(e) {
                             
                             
                       //     alert(options[1].value); die();
-                          var sts = data.data.status;  
+                          var sts = data.data[0].status;  
                             
                           if (options[i].value == sts) {
                             options[i].selected = true;

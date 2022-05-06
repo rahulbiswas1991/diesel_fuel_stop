@@ -93,18 +93,24 @@ class Process extends CI_Controller
 	public function adupdate_lead()
     {
         $lead_data = array(
-            'name' => trim($_POST['lead_name']),
+            'user_id' => trim($_POST['user_id']),
+            'contact_name' => trim($_POST['lead_name']),
             'company_name' => trim($_POST['company_name']),
-            'phone' => trim($_POST['phone']),
+            'phone_no' => trim($_POST['phone']),
             'email' => trim($_POST['email']),
+            'DOT_number' => trim($_POST['DOT_number']),
+            'street' => trim($_POST['street']),
             'city' => trim($_POST['city']),
-           'designation' => trim($_POST['designation']),
+            'state' => trim($_POST['state']),
+            'zip_code' => trim($_POST['zip_code']),
+            'no_of_trucks' => trim($_POST['total_trucks']),
+            'potential_gallons' => trim($_POST['potential_gallons']),
             'status' => trim($_POST['lead_status']),
              'complete_date' => date('Y-m-d H:i:s')
           
         );
-        if($_POST['lead_ref'] !='' ){
-             $bank_update = $this->user_model->updateInfor('leads', $lead_data, 'id', $_POST['lead_ref']);
+        if($_POST['lead_ref_id'] !='' ){
+             $bank_update = $this->user_model->updateInfor('leads', $lead_data, 'id', $_POST['lead_ref_id']);
         }else{
               $bnkinfoarr = array(
                     'user_id' => $_POST['b_user_id'],
