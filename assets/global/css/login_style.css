@@ -1,0 +1,284 @@
+::selection { background-color: #E13300; color: white; }
+	::-moz-selection { background-color: #E13300; color: white; }
+
+	@font-face {
+		font-family: 'MYRIADPROREGULAR';
+		src: url('../assets/fonts/MYRIADPROREGULAR.eot');
+		src: local('../assets/fonts/MYRIADPROREGULAR'), url('../assets/fonts/MYRIADPROREGULAR.woff') format('woff'), url('../assets/fonts/MYRIADPROREGULAR.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: 'Myriadpro-light';
+		src: url('../assets/fonts/Myriadpro-light.eot');
+		src: local('../assets/fonts/Myriadpro-light'), url('../assets/fonts/Myriadpro-light.woff') format('woff'), url('../assets/fonts/Myriadpro-light.ttf') format('truetype');
+	}
+	body {
+		background-color: #fff;
+		margin: 0px;
+		font-size:16px;
+		font-family: 'MYRIADPROREGULAR' !important;
+		color: #4F5155;
+	}
+	.form-control::-moz-placeholder {
+	  color: inherit;
+	  opacity: 1;
+	}
+	.login-section {
+	    
+    background: rgba(0, 0, 0, 0) url("https://ak.picdn.net/shutterstock/videos/1019479579/thumb/1.jpg") no-repeat scroll 0 0 / cover ;
+    /*background: rgba(0, 0, 0, 0) url("../../images/login-back.jpg") no-repeat scroll 0 0 / cover ;*/
+    height: 100vh;
+    padding: 25px 0;
+	}
+	.login-left h4 {
+	  font-size: 40px ;
+	  font-family: 'Myriadpro-light' ;
+	}
+	.login-left h3 {
+	  font-size: 35px !important;
+	  margin-top: 0 !important;
+	}
+	.has-success .form-control:focus ,.has-success .form-control{
+	  border-color: #21b8e9;
+	  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 6px #60d2dc;
+	}
+	.login-left {
+	  background: rgb(35, 57, 106) url("../../images/logo-icon.png") no-repeat scroll center bottom -50px / 100% auto;
+	  box-shadow: 0 0 5px #091c42;
+	  color: #fff;
+	  height: 540px;
+	  padding: 20px;
+	}
+	.register-side-card{
+		 background: rgb(35, 57, 106) url("../../images/logo-icon.png") no-repeat scroll center bottom 0px / 100% auto;
+	}
+	.forgot-right {
+    margin-top: 130px !important;
+	}
+	.reset-right {
+    margin-top: 100px !important;
+}
+	.login-left img {
+	  max-width: 190px;
+	}
+	.g-recaptcha > div {
+	  margin: auto;
+	}
+	.login-right.row {
+	  background: #fff none repeat scroll 0 0;
+	  margin-top: 40px;
+	  padding: 20px 45px;
+	}
+	.verify-right{
+		margin-top: 50px !important;
+	}
+	.detail-right.row {
+  background: #fff none repeat scroll 0 0;
+  margin-top: 40px;
+  padding: 0 30px;
+}
+	.login-fields {
+   -moz-border-bottom-colors: none;
+   -moz-border-left-colors: none;
+   -moz-border-right-colors: none;
+   -moz-border-top-colors: none;
+   border-color: -moz-use-text-color -moz-use-text-color #213967;
+   border-image: none;
+   border-radius: 0 !important;
+   border-style: none none solid;
+   border-width: 0 0 1px;
+  -webkit-box-shadow:none !important;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:none !important;  /* Firefox 3.5 - 3.6 */
+  box-shadow:none !important;
+   color: rgb(35, 57, 106) !important;
+   height: 50px;  
+   font-size: 16px;
+    padding-left: 50px;    
+   font-family: 'Myriadpro-light';
+   width: 100%;
+}
+select#u_country {
+     text-indent: 30px;
+    padding-left: 0;
+    box-shadow: none;
+   -webkit-box-shadow: none;
+   outline: none;
+   -webkit-appearance:none;
+   -moz-appearance:none;
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+	.form-verify .login-fields {
+		 border-width: 0 0 2px;
+		 height:40px;
+	}
+	.controls {
+	  position: relative;
+	}
+	.input-icons > img {
+	  height: 20px;
+	  margin-top: 0px;
+	}
+	.input-icons {
+	  position: absolute;
+	  top: 12px;
+	  left: 15px;
+	}
+	#user_registration > h3 , #user_login h3 {
+	  color: #213967;
+	  font-size: 28px;
+	  margin-bottom: 20px;
+	  text-transform: uppercase;
+	}
+	.g-recaptcha {
+	  float: none;
+	  margin-bottom: 10px;
+	  margin-top: 10px;
+	  width: 100% !important;
+	}
+	.orange-btn {
+	  background: #21b8e9 none repeat scroll 0 0;
+	  border: 1px solid #21b8e9;
+	  border-radius: 0;
+	  display: block;
+	  float: none;
+	  font-size: 15px;
+	  height: 45px;
+	  margin: auto;
+	  text-transform: uppercase;
+	  width: 166px;
+	}
+	.new-user {
+	  color: #213967;
+	  font-family: "Myriadpro-light";
+	  font-size: 16px;
+	  text-align: center;
+	}
+	.new-user  a , .new-user  a:hover{
+	  font-size: 15px;
+	  font-family: 'MYRIADPROREGULAR';
+	  text-transform: uppercase;
+	}
+	a ,a:hover{
+		color: #213967;
+		background-color: transparent;
+		font-weight: normal;
+		text-decoration:none;
+	}
+
+	.btn-success.active, .btn-success:active, .btn-success:hover, .open > .btn-success.dropdown-toggle, .btn-success.disabled.focus, .btn-success.disabled:focus, .btn-success.disabled:hover, .btn-success.focus[disabled], .btn-success[disabled]:focus, .btn-success[disabled]:hover, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:focus, fieldset[disabled], .btn-success.focus, .btn-success:focus{
+  background-color: #21b8e9 !important;
+  border-color: #21b8e9 !important;
+  color: #fff;
+}
+	.form-verify {
+	  display: block;
+	  margin: auto;
+	  text-align: center;
+	}
+	code {
+		font-family: Consolas, Monaco, Courier New, Courier, monospace;
+		font-size: 12px;
+		background-color: #f9f9f9;
+		border: 1px solid #D0D0D0;
+		color: #002166;
+		display: block;
+		margin: 14px 0 14px 0;
+		padding: 12px 10px 12px 10px;
+	}
+	.login-left.register-side-card {
+	  height: 680px;
+	}
+	.register-right.row {
+	  background: #fff none repeat scroll 0 0;
+	  margin-top: 25px;
+	  padding:5px 45px;
+	}
+	.register-section {
+	  background: rgba(0, 0, 0, 0) url("../../images/login-back.jpg") no-repeat scroll 0 0 / cover ;
+	  height: auto;
+	  padding: 30px 0;
+        overflow: hidden;
+	}
+	.input-icons-eye {
+	  position: absolute;
+	  right: 0;
+	  top: 10px;
+	}
+	.input-icons-eye img {
+	  width: 25px;
+	}
+	.verify h3, .register-side-card h3 {
+	  font-size: 43px !important;
+	}
+	.login-right h3 {
+	  color: #21b8e9;
+	  margin-bottom: 20px;
+	  text-transform: uppercase;
+	}
+	.detail-right h3 {
+	  color: #213967;
+	  margin-bottom: 20px;
+	  text-transform: uppercase;
+	}
+	.login-left h3 {
+	  font-size: 35px !important;
+	  margin-top: 0 !important;
+	}
+	.form-verify {
+	  border: 2px solid rgb(33, 57, 103);
+	  border-radius: 10px;
+	  display: block;
+	  margin: auto;
+	  padding: 20px 40px;
+	  text-align: center;
+	}
+	.form-verify p {
+	  color: rgb(33, 57, 103);
+	  font-family: 'Myriadpro-light' ;
+	  
+	}
+	.form-verify .login-fields {
+	  padding-left: 10px;
+	  text-align: center;
+	}
+.g-recaptcha {
+-webkit-transform: scale(0.88);
+     -moz-transform: scale(0.88);
+      -ms-transform: scale(0.88);
+       -o-transform: scale(0.88);
+          transform: scale(0.88);
+   -webkit-transform-origin: 0 0;
+      -moz-transform-origin: 0 0;
+       -ms-transform-origin: 0 0;
+        -o-transform-origin: 0 0;
+           transform-origin: 0 0;
+}
+	@media screen and (max-width:1920px) and (min-width:1440px){ 
+	.login-section {
+	  background: rgba(0, 0, 0, 0) url("../../images/login-back.jpg") no-repeat scroll 0 0;
+	  height: 100vh;
+	  background-size:cover;
+	  padding: 160px 0;
+	}
+	}
+@media screen and (max-width:767px){
+.login-right.row {
+    margin-top: 0 !important;
+    padding: 0 7px;
+}
+.fullview{
+width: 100%;
+margin-top: 10px;    
+    }    
+}
+@media screen and (max-width:375px){
+.register-section .login-left.register-side-card {
+    height: 550px;
+}
+}
+}

@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0; }
+
+.basic-style{
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;
+  position: relative; }
+  .basic-style .github-badge {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .basic-style h1 {
+    text-align: center;
+    margin-bottom: 70px; }
+  .basic-style .hv-container {
+    flex-grow: 1;
+    justify-content: center; }
+
+  .basic-style > h1 {
+    color: #ac2222; }
+
+p.simple-card {
+  border-radius: 7px;
+  color: hsl(0, 68%, 60%);
+  height: 60px;
+  margin: 0;
+  min-width: 65px;
+  text-align: center;
+}
+
+.hv-item-parent p {
+  font-weight: bold;
+  color: #DE5454; }
+
+.management-hierarchy {
+  background-color: #303840; }
+  .management-hierarchy > h1 {
+    color: #FFF; }
+  .management-hierarchy .person {
+    text-align: center; }
+    .management-hierarchy .person > img {
+      height: 110px;
+      border: 5px solid #f00;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #fff; }
+    .management-hierarchy .person > p.name {
+      background-color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: normal;
+      color: #3BAA9D;
+      margin: 0;
+      position: relative; }
+      .management-hierarchy .person > p.name b {
+        color: rgba(59, 170, 157, 0.5); }
+      .management-hierarchy .person > p.name:before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 8px;
+        background-color: #fff;
+        left: 50%;
+        top: 0;
+        transform: translateY(-100%); }
+
+		
+		
+		.inner-image > img {
+  width: 60px;
+}
+.simple-card > img {
+  display: table;
+  height: 60px;
+  margin: auto;
+  position: relative;
+}
+.inner-image {
+  bottom: 0;
+  position: absolute;
+  top: 36px;
+}
+.inner-image.last-child {
+  left: 35px;
+}
+.hv-item-parent h5 {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 20px;
+  color: #000 !important;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 5px;
+  position: absolute;
+  top: 63px !important;
+  z-index: 1;
+}
+.hv-parent-top h5 {
+  background: #2b3643 none repeat scroll 0 0;
+  border-radius: 20px;
+  color: #fff !important;
+  font-size: 10px;
+  font-weight: normal;
+  left: 0;
+  margin: auto;
+  padding: 3px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 63px !important;
+  width: 80px;
+  z-index: 1;
+}
+.hv-item-fourth-line > img {
+  width: 100px;
+}
+.hv-parent-third > h5 {
+  /*left: 90px !important;*/
+   color:#d76820;
+     font-weight:normal;
+}
+.hv-item-child h5 {
+  background: #2b3643 none repeat scroll 0 0;
+  border-radius: 20px;
+  color: #fff !important;
+  font-size: 10px;
+  font-weight: normal;
+  left: 0;
+  margin: auto;
+  max-width: 80px !important;
+  min-height: 30px;
+  padding: 3px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 70px;
+}
+.hv-item-top-line {
+  display: table;
+  margin: auto;
+  position: relative;
+  width: 100%;
+}
+.hv-item-top-line > img {
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 470px;
+}
+.hv-item-second-line {
+  position: relative;
+  margin: auto;
+  display: block;
+}
+.hv-item-fourth-line {
+  position: relative;
+  margin: auto;
+  display: block;
+}
+.hv-item-second-line > img {
+  width: 220px;
+}
+.hv-item-third-line > img {
+  width: 220px;
+}
+
+.hv-item-fourth-line > img {
+  width:;
+}
+/*.hv-last-item-left1 {
+  margin-top: -88px;
+}
+.hv-last-item-right1 {
+  margin-top: -88px;
+}*/
+
+@media (max-width: 767px)
+{
+.hv-wrapper .hv-item .hv-item-children .hv-item-child {padding: 0 2px;}
+        .hv-container p.simple-card {
+    padding: 12px 0px 68px 0px;}
+    .hv-parent-top h5{font-size: 8px;max-width: 75px !important;padding: 5px;}
+    .hv-item-child h5{font-size: 8px;max-width: 72px !important;padding: 5px;}
+    .simple-card > img{height: 50px;}
+    .hv-item-child img {height: 50px !important;}
+}

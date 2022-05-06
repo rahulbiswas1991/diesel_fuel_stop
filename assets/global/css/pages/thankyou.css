@@ -1,0 +1,17 @@
+/* Thank You Classes */
+.thankyou-box {margin:0 auto; float:none !important;}
+
+.thankyou-inner { background: #6483bd; /* Old browsers */
+	background: -moz-linear-gradient(top, #6483bd 0%, #38689f 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #6483bd 0%,#38689f 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #6483bd 0%,#38689f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6483bd', endColorstr='#38689f',GradientType=0 ); /* IE6-9 */
+	border-radius:10px !important; -webkit-border-radius:10px !important; -moz-border-radius:10px !important; padding:30px 20px; margin-top:20px;}
+
+.thankyou-inner h4 {color:#fff; font-size:26px; font-weight:600; margin:0; padding-top:5px;}
+
+.thankyou-inner h4 span {border-bottom:1px solid #fff; padding:15px 0; display:inline-block;}
+
+.thankyou-inner h6 {font-size:20px; color:#fff; font-weight:600; padding:15px 0; margin:0;}
+
+.go-home-btn {padding:20px 0;}

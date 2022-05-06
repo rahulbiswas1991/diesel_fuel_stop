@@ -1,0 +1,34 @@
+INFO - 2021-09-13 12:10:06 --> Config Class Initialized
+INFO - 2021-09-13 12:10:06 --> Hooks Class Initialized
+DEBUG - 2021-09-13 12:10:06 --> UTF-8 Support Enabled
+INFO - 2021-09-13 12:10:06 --> Utf8 Class Initialized
+INFO - 2021-09-13 12:10:06 --> URI Class Initialized
+INFO - 2021-09-13 12:10:06 --> Router Class Initialized
+INFO - 2021-09-13 12:10:06 --> Output Class Initialized
+INFO - 2021-09-13 12:10:06 --> Security Class Initialized
+DEBUG - 2021-09-13 12:10:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-13 12:10:06 --> Input Class Initialized
+INFO - 2021-09-13 12:10:07 --> Language Class Initialized
+INFO - 2021-09-13 12:10:07 --> Loader Class Initialized
+INFO - 2021-09-13 12:10:07 --> Controller Class Initialized
+INFO - 2021-09-13 12:10:07 --> Database Driver Class Initialized
+INFO - 2021-09-13 12:10:07 --> Model "admin_modal" initialized
+INFO - 2021-09-13 12:10:07 --> Model "common_model" initialized
+INFO - 2021-09-13 12:10:07 --> Model "user_model" initialized
+INFO - 2021-09-13 12:10:07 --> Helper loaded: url_helper
+INFO - 2021-09-13 12:10:07 --> Helper loaded: date_helper
+INFO - 2021-09-13 12:10:07 --> Helper loaded: form_helper
+INFO - 2021-09-13 12:10:07 --> Helper loaded: string_helper
+INFO - 2021-09-13 12:10:07 --> Helper loaded: comman_helper
+INFO - 2021-09-13 12:10:07 --> Email Class Initialized
+INFO - 2021-09-13 12:10:07 --> Jquery Class Initialized
+INFO - 2021-09-13 12:10:07 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-09-13 12:10:07 --> Session: Class initialized using 'files' driver.
+INFO - 2021-09-13 12:10:08 --> Upload Class Initialized
+DEBUG - 2021-09-13 12:10:08 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-09-13 12:10:08 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-09-13 12:10:08 --> Encryption Class Initialized
+INFO - 2021-09-13 12:10:08 --> User Agent Class Initialized
+INFO - 2021-09-13 12:10:08 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/admin-login.php
+INFO - 2021-09-13 12:10:08 --> Final output sent to browser
+DEBUG - 2021-09-13 12:10:08 --> Total execution time: 1.5607

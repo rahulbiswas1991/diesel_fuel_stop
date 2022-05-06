@@ -1,0 +1,68 @@
+INFO - 2021-08-30 18:40:40 --> Config Class Initialized
+INFO - 2021-08-30 18:40:40 --> Hooks Class Initialized
+INFO - 2021-08-30 18:40:40 --> Config Class Initialized
+INFO - 2021-08-30 18:40:40 --> Hooks Class Initialized
+DEBUG - 2021-08-30 18:40:40 --> UTF-8 Support Enabled
+DEBUG - 2021-08-30 18:40:40 --> UTF-8 Support Enabled
+INFO - 2021-08-30 18:40:40 --> Utf8 Class Initialized
+INFO - 2021-08-30 18:40:40 --> Utf8 Class Initialized
+INFO - 2021-08-30 18:40:40 --> URI Class Initialized
+INFO - 2021-08-30 18:40:40 --> URI Class Initialized
+INFO - 2021-08-30 18:40:40 --> Router Class Initialized
+INFO - 2021-08-30 18:40:40 --> Router Class Initialized
+INFO - 2021-08-30 18:40:40 --> Output Class Initialized
+INFO - 2021-08-30 18:40:40 --> Output Class Initialized
+INFO - 2021-08-30 18:40:40 --> Security Class Initialized
+INFO - 2021-08-30 18:40:40 --> Security Class Initialized
+DEBUG - 2021-08-30 18:40:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2021-08-30 18:40:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-08-30 18:40:40 --> Input Class Initialized
+INFO - 2021-08-30 18:40:40 --> Input Class Initialized
+INFO - 2021-08-30 18:40:40 --> Language Class Initialized
+INFO - 2021-08-30 18:40:40 --> Language Class Initialized
+INFO - 2021-08-30 18:40:41 --> Loader Class Initialized
+INFO - 2021-08-30 18:40:41 --> Loader Class Initialized
+INFO - 2021-08-30 18:40:41 --> Controller Class Initialized
+INFO - 2021-08-30 18:40:41 --> Controller Class Initialized
+INFO - 2021-08-30 18:40:41 --> Database Driver Class Initialized
+INFO - 2021-08-30 18:40:41 --> Database Driver Class Initialized
+INFO - 2021-08-30 18:40:41 --> Model "admin_modal" initialized
+INFO - 2021-08-30 18:40:41 --> Model "admin_modal" initialized
+INFO - 2021-08-30 18:40:41 --> Model "common_model" initialized
+INFO - 2021-08-30 18:40:41 --> Model "common_model" initialized
+INFO - 2021-08-30 18:40:41 --> Model "user_model" initialized
+INFO - 2021-08-30 18:40:41 --> Model "user_model" initialized
+INFO - 2021-08-30 18:40:41 --> Model "Notificationmodel" initialized
+INFO - 2021-08-30 18:40:41 --> Model "Notificationmodel" initialized
+INFO - 2021-08-30 18:40:41 --> Helper loaded: url_helper
+INFO - 2021-08-30 18:40:41 --> Helper loaded: url_helper
+INFO - 2021-08-30 18:40:41 --> Helper loaded: date_helper
+INFO - 2021-08-30 18:40:41 --> Helper loaded: date_helper
+INFO - 2021-08-30 18:40:41 --> Helper loaded: form_helper
+INFO - 2021-08-30 18:40:41 --> Helper loaded: form_helper
+INFO - 2021-08-30 18:40:41 --> Helper loaded: string_helper
+INFO - 2021-08-30 18:40:41 --> Helper loaded: string_helper
+INFO - 2021-08-30 18:40:41 --> Helper loaded: comman_helper
+INFO - 2021-08-30 18:40:41 --> Helper loaded: comman_helper
+INFO - 2021-08-30 18:40:41 --> Email Class Initialized
+INFO - 2021-08-30 18:40:41 --> Email Class Initialized
+INFO - 2021-08-30 18:40:41 --> Jquery Class Initialized
+INFO - 2021-08-30 18:40:41 --> Jquery Class Initialized
+INFO - 2021-08-30 18:40:41 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-08-30 18:40:41 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-08-30 18:40:41 --> Session: Class initialized using 'files' driver.
+INFO - 2021-08-30 18:40:41 --> Session: Class initialized using 'files' driver.
+INFO - 2021-08-30 18:40:41 --> Upload Class Initialized
+INFO - 2021-08-30 18:40:41 --> Upload Class Initialized
+DEBUG - 2021-08-30 18:40:41 --> Encryption: Auto-configured driver 'openssl'.
+DEBUG - 2021-08-30 18:40:41 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-08-30 18:40:41 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-08-30 18:40:41 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-08-30 18:40:41 --> Encryption Class Initialized
+INFO - 2021-08-30 18:40:41 --> Encryption Class Initialized
+INFO - 2021-08-30 18:40:41 --> User Agent Class Initialized
+INFO - 2021-08-30 18:40:41 --> User Agent Class Initialized
+INFO - 2021-08-30 18:40:41 --> Final output sent to browser
+DEBUG - 2021-08-30 18:40:41 --> Total execution time: 1.2482
+INFO - 2021-08-30 18:40:41 --> Final output sent to browser
+DEBUG - 2021-08-30 18:40:41 --> Total execution time: 1.2613

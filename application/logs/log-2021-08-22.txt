@@ -1,0 +1,262 @@
+INFO - 2021-08-22 21:59:19 --> Config Class Initialized
+INFO - 2021-08-22 21:59:19 --> Hooks Class Initialized
+DEBUG - 2021-08-22 21:59:19 --> UTF-8 Support Enabled
+INFO - 2021-08-22 21:59:19 --> Utf8 Class Initialized
+INFO - 2021-08-22 21:59:19 --> URI Class Initialized
+INFO - 2021-08-22 21:59:19 --> Router Class Initialized
+INFO - 2021-08-22 21:59:19 --> Output Class Initialized
+INFO - 2021-08-22 21:59:19 --> Security Class Initialized
+DEBUG - 2021-08-22 21:59:19 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-08-22 21:59:19 --> Input Class Initialized
+INFO - 2021-08-22 21:59:19 --> Language Class Initialized
+INFO - 2021-08-22 21:59:19 --> Loader Class Initialized
+INFO - 2021-08-22 21:59:19 --> Controller Class Initialized
+INFO - 2021-08-22 21:59:20 --> Database Driver Class Initialized
+INFO - 2021-08-22 21:59:20 --> Model "admin_modal" initialized
+INFO - 2021-08-22 21:59:20 --> Model "common_model" initialized
+INFO - 2021-08-22 21:59:20 --> Model "user_model" initialized
+INFO - 2021-08-22 21:59:20 --> Model "Notificationmodel" initialized
+INFO - 2021-08-22 21:59:20 --> Helper loaded: url_helper
+INFO - 2021-08-22 21:59:20 --> Helper loaded: date_helper
+INFO - 2021-08-22 21:59:20 --> Helper loaded: form_helper
+INFO - 2021-08-22 21:59:20 --> Helper loaded: string_helper
+INFO - 2021-08-22 21:59:20 --> Helper loaded: comman_helper
+INFO - 2021-08-22 21:59:20 --> Email Class Initialized
+INFO - 2021-08-22 21:59:20 --> Jquery Class Initialized
+INFO - 2021-08-22 21:59:20 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-08-22 21:59:20 --> Session: Class initialized using 'files' driver.
+INFO - 2021-08-22 21:59:20 --> Upload Class Initialized
+DEBUG - 2021-08-22 21:59:20 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-08-22 21:59:20 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-08-22 21:59:20 --> Encryption Class Initialized
+INFO - 2021-08-22 21:59:20 --> Config Class Initialized
+INFO - 2021-08-22 21:59:20 --> Hooks Class Initialized
+DEBUG - 2021-08-22 21:59:20 --> UTF-8 Support Enabled
+INFO - 2021-08-22 21:59:20 --> Utf8 Class Initialized
+INFO - 2021-08-22 21:59:20 --> URI Class Initialized
+INFO - 2021-08-22 21:59:20 --> Router Class Initialized
+INFO - 2021-08-22 21:59:20 --> Output Class Initialized
+INFO - 2021-08-22 21:59:20 --> Security Class Initialized
+DEBUG - 2021-08-22 21:59:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-08-22 21:59:20 --> Input Class Initialized
+INFO - 2021-08-22 21:59:20 --> Language Class Initialized
+INFO - 2021-08-22 21:59:20 --> Loader Class Initialized
+INFO - 2021-08-22 21:59:20 --> Controller Class Initialized
+INFO - 2021-08-22 21:59:20 --> Database Driver Class Initialized
+INFO - 2021-08-22 21:59:20 --> Model "admin_modal" initialized
+INFO - 2021-08-22 21:59:20 --> Model "common_model" initialized
+INFO - 2021-08-22 21:59:20 --> Model "user_model" initialized
+INFO - 2021-08-22 21:59:20 --> Helper loaded: url_helper
+INFO - 2021-08-22 21:59:20 --> Helper loaded: date_helper
+INFO - 2021-08-22 21:59:20 --> Helper loaded: form_helper
+INFO - 2021-08-22 21:59:20 --> Helper loaded: string_helper
+INFO - 2021-08-22 21:59:20 --> Helper loaded: comman_helper
+INFO - 2021-08-22 21:59:20 --> Email Class Initialized
+INFO - 2021-08-22 21:59:20 --> Jquery Class Initialized
+INFO - 2021-08-22 21:59:20 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-08-22 21:59:20 --> Session: Class initialized using 'files' driver.
+INFO - 2021-08-22 21:59:20 --> Upload Class Initialized
+DEBUG - 2021-08-22 21:59:20 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-08-22 21:59:20 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-08-22 21:59:20 --> Encryption Class Initialized
+INFO - 2021-08-22 21:59:20 --> User Agent Class Initialized
+INFO - 2021-08-22 21:59:20 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/admin-login.php
+INFO - 2021-08-22 21:59:20 --> Final output sent to browser
+DEBUG - 2021-08-22 21:59:20 --> Total execution time: 0.0666
+INFO - 2021-08-22 21:59:32 --> Config Class Initialized
+INFO - 2021-08-22 21:59:32 --> Hooks Class Initialized
+DEBUG - 2021-08-22 21:59:32 --> UTF-8 Support Enabled
+INFO - 2021-08-22 21:59:32 --> Utf8 Class Initialized
+INFO - 2021-08-22 21:59:32 --> URI Class Initialized
+INFO - 2021-08-22 21:59:32 --> Router Class Initialized
+INFO - 2021-08-22 21:59:33 --> Output Class Initialized
+INFO - 2021-08-22 21:59:33 --> Security Class Initialized
+DEBUG - 2021-08-22 21:59:33 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-08-22 21:59:33 --> Input Class Initialized
+INFO - 2021-08-22 21:59:33 --> Language Class Initialized
+INFO - 2021-08-22 21:59:33 --> Loader Class Initialized
+INFO - 2021-08-22 21:59:33 --> Controller Class Initialized
+INFO - 2021-08-22 21:59:33 --> Database Driver Class Initialized
+INFO - 2021-08-22 21:59:33 --> Model "admin_modal" initialized
+INFO - 2021-08-22 21:59:33 --> Model "common_model" initialized
+INFO - 2021-08-22 21:59:33 --> Model "user_model" initialized
+INFO - 2021-08-22 21:59:33 --> Helper loaded: url_helper
+INFO - 2021-08-22 21:59:33 --> Helper loaded: date_helper
+INFO - 2021-08-22 21:59:33 --> Helper loaded: form_helper
+INFO - 2021-08-22 21:59:33 --> Helper loaded: string_helper
+INFO - 2021-08-22 21:59:33 --> Helper loaded: comman_helper
+INFO - 2021-08-22 21:59:33 --> Email Class Initialized
+INFO - 2021-08-22 21:59:33 --> Jquery Class Initialized
+INFO - 2021-08-22 21:59:33 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-08-22 21:59:33 --> Session: Class initialized using 'files' driver.
+INFO - 2021-08-22 21:59:33 --> Upload Class Initialized
+DEBUG - 2021-08-22 21:59:33 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-08-22 21:59:33 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-08-22 21:59:33 --> Encryption Class Initialized
+INFO - 2021-08-22 21:59:33 --> User Agent Class Initialized
+INFO - 2021-08-22 21:59:33 --> Final output sent to browser
+DEBUG - 2021-08-22 21:59:33 --> Total execution time: 0.0575
+INFO - 2021-08-22 21:59:33 --> Config Class Initialized
+INFO - 2021-08-22 21:59:33 --> Hooks Class Initialized
+DEBUG - 2021-08-22 21:59:33 --> UTF-8 Support Enabled
+INFO - 2021-08-22 21:59:33 --> Utf8 Class Initialized
+INFO - 2021-08-22 21:59:33 --> URI Class Initialized
+INFO - 2021-08-22 21:59:33 --> Router Class Initialized
+INFO - 2021-08-22 21:59:33 --> Output Class Initialized
+INFO - 2021-08-22 21:59:33 --> Security Class Initialized
+DEBUG - 2021-08-22 21:59:33 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-08-22 21:59:33 --> Input Class Initialized
+INFO - 2021-08-22 21:59:33 --> Language Class Initialized
+INFO - 2021-08-22 21:59:33 --> Loader Class Initialized
+INFO - 2021-08-22 21:59:33 --> Controller Class Initialized
+INFO - 2021-08-22 21:59:33 --> Database Driver Class Initialized
+INFO - 2021-08-22 21:59:33 --> Model "admin_modal" initialized
+INFO - 2021-08-22 21:59:33 --> Model "common_model" initialized
+INFO - 2021-08-22 21:59:33 --> Model "user_model" initialized
+INFO - 2021-08-22 21:59:33 --> Model "Notificationmodel" initialized
+INFO - 2021-08-22 21:59:33 --> Helper loaded: url_helper
+INFO - 2021-08-22 21:59:33 --> Helper loaded: date_helper
+INFO - 2021-08-22 21:59:33 --> Helper loaded: form_helper
+INFO - 2021-08-22 21:59:33 --> Helper loaded: string_helper
+INFO - 2021-08-22 21:59:33 --> Helper loaded: comman_helper
+INFO - 2021-08-22 21:59:33 --> Email Class Initialized
+INFO - 2021-08-22 21:59:33 --> Jquery Class Initialized
+INFO - 2021-08-22 21:59:33 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-08-22 21:59:33 --> Session: Class initialized using 'files' driver.
+INFO - 2021-08-22 21:59:33 --> Upload Class Initialized
+DEBUG - 2021-08-22 21:59:33 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-08-22 21:59:33 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-08-22 21:59:33 --> Encryption Class Initialized
+DEBUG - 2021-08-22 21:59:33 --> Javascript class already loaded. Second attempt ignored.
+DEBUG - 2021-08-22 21:59:33 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2021-08-22 21:59:33 --> Upload class already loaded. Second attempt ignored.
+INFO - 2021-08-22 21:59:33 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-08-22 21:59:33 --> Pagination Class Initialized
+INFO - 2021-08-22 21:59:34 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/header.php
+INFO - 2021-08-22 21:59:34 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/dashboard.php
+INFO - 2021-08-22 21:59:34 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/footer.php
+INFO - 2021-08-22 21:59:34 --> Final output sent to browser
+DEBUG - 2021-08-22 21:59:34 --> Total execution time: 0.8343
+INFO - 2021-08-22 22:00:32 --> Config Class Initialized
+INFO - 2021-08-22 22:00:32 --> Hooks Class Initialized
+DEBUG - 2021-08-22 22:00:32 --> UTF-8 Support Enabled
+INFO - 2021-08-22 22:00:32 --> Utf8 Class Initialized
+INFO - 2021-08-22 22:00:32 --> URI Class Initialized
+INFO - 2021-08-22 22:00:32 --> Router Class Initialized
+INFO - 2021-08-22 22:00:32 --> Output Class Initialized
+INFO - 2021-08-22 22:00:32 --> Security Class Initialized
+DEBUG - 2021-08-22 22:00:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-08-22 22:00:32 --> Input Class Initialized
+INFO - 2021-08-22 22:00:32 --> Language Class Initialized
+INFO - 2021-08-22 22:00:32 --> Loader Class Initialized
+INFO - 2021-08-22 22:00:32 --> Controller Class Initialized
+INFO - 2021-08-22 22:00:32 --> Database Driver Class Initialized
+INFO - 2021-08-22 22:00:32 --> Model "admin_modal" initialized
+INFO - 2021-08-22 22:00:32 --> Model "common_model" initialized
+INFO - 2021-08-22 22:00:32 --> Model "user_model" initialized
+INFO - 2021-08-22 22:00:32 --> Model "Notificationmodel" initialized
+INFO - 2021-08-22 22:00:32 --> Helper loaded: url_helper
+INFO - 2021-08-22 22:00:32 --> Helper loaded: date_helper
+INFO - 2021-08-22 22:00:32 --> Helper loaded: form_helper
+INFO - 2021-08-22 22:00:32 --> Helper loaded: string_helper
+INFO - 2021-08-22 22:00:32 --> Helper loaded: comman_helper
+INFO - 2021-08-22 22:00:32 --> Email Class Initialized
+INFO - 2021-08-22 22:00:32 --> Jquery Class Initialized
+INFO - 2021-08-22 22:00:32 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-08-22 22:00:32 --> Session: Class initialized using 'files' driver.
+INFO - 2021-08-22 22:00:32 --> Upload Class Initialized
+DEBUG - 2021-08-22 22:00:32 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-08-22 22:00:32 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-08-22 22:00:32 --> Encryption Class Initialized
+DEBUG - 2021-08-22 22:00:32 --> Javascript class already loaded. Second attempt ignored.
+DEBUG - 2021-08-22 22:00:32 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2021-08-22 22:00:32 --> Upload class already loaded. Second attempt ignored.
+INFO - 2021-08-22 22:00:32 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-08-22 22:00:32 --> Pagination Class Initialized
+INFO - 2021-08-22 22:00:32 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/header.php
+INFO - 2021-08-22 22:00:32 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/users.php
+INFO - 2021-08-22 22:00:32 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/footer.php
+INFO - 2021-08-22 22:00:32 --> Final output sent to browser
+DEBUG - 2021-08-22 22:00:32 --> Total execution time: 0.0783
+INFO - 2021-08-22 22:02:36 --> Config Class Initialized
+INFO - 2021-08-22 22:02:36 --> Hooks Class Initialized
+DEBUG - 2021-08-22 22:02:36 --> UTF-8 Support Enabled
+INFO - 2021-08-22 22:02:36 --> Utf8 Class Initialized
+INFO - 2021-08-22 22:02:36 --> URI Class Initialized
+INFO - 2021-08-22 22:02:36 --> Router Class Initialized
+INFO - 2021-08-22 22:02:36 --> Output Class Initialized
+INFO - 2021-08-22 22:02:36 --> Security Class Initialized
+DEBUG - 2021-08-22 22:02:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-08-22 22:02:36 --> Input Class Initialized
+INFO - 2021-08-22 22:02:36 --> Language Class Initialized
+INFO - 2021-08-22 22:02:36 --> Loader Class Initialized
+INFO - 2021-08-22 22:02:36 --> Controller Class Initialized
+INFO - 2021-08-22 22:02:36 --> Database Driver Class Initialized
+INFO - 2021-08-22 22:02:36 --> Model "admin_modal" initialized
+INFO - 2021-08-22 22:02:36 --> Model "common_model" initialized
+INFO - 2021-08-22 22:02:36 --> Model "user_model" initialized
+INFO - 2021-08-22 22:02:36 --> Model "Notificationmodel" initialized
+INFO - 2021-08-22 22:02:36 --> Helper loaded: url_helper
+INFO - 2021-08-22 22:02:36 --> Helper loaded: date_helper
+INFO - 2021-08-22 22:02:36 --> Helper loaded: form_helper
+INFO - 2021-08-22 22:02:36 --> Helper loaded: string_helper
+INFO - 2021-08-22 22:02:36 --> Helper loaded: comman_helper
+INFO - 2021-08-22 22:02:36 --> Email Class Initialized
+INFO - 2021-08-22 22:02:36 --> Jquery Class Initialized
+INFO - 2021-08-22 22:02:36 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-08-22 22:02:36 --> Session: Class initialized using 'files' driver.
+INFO - 2021-08-22 22:02:36 --> Upload Class Initialized
+DEBUG - 2021-08-22 22:02:36 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-08-22 22:02:36 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-08-22 22:02:36 --> Encryption Class Initialized
+DEBUG - 2021-08-22 22:02:36 --> Javascript class already loaded. Second attempt ignored.
+DEBUG - 2021-08-22 22:02:36 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2021-08-22 22:02:36 --> Upload class already loaded. Second attempt ignored.
+INFO - 2021-08-22 22:02:36 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-08-22 22:02:36 --> Pagination Class Initialized
+INFO - 2021-08-22 22:02:36 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/header.php
+INFO - 2021-08-22 22:02:36 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/users.php
+INFO - 2021-08-22 22:02:36 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/footer.php
+INFO - 2021-08-22 22:02:36 --> Final output sent to browser
+DEBUG - 2021-08-22 22:02:36 --> Total execution time: 0.0885
+INFO - 2021-08-22 22:03:04 --> Config Class Initialized
+INFO - 2021-08-22 22:03:04 --> Hooks Class Initialized
+DEBUG - 2021-08-22 22:03:04 --> UTF-8 Support Enabled
+INFO - 2021-08-22 22:03:04 --> Utf8 Class Initialized
+INFO - 2021-08-22 22:03:04 --> URI Class Initialized
+INFO - 2021-08-22 22:03:04 --> Router Class Initialized
+INFO - 2021-08-22 22:03:04 --> Output Class Initialized
+INFO - 2021-08-22 22:03:04 --> Security Class Initialized
+DEBUG - 2021-08-22 22:03:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-08-22 22:03:04 --> Input Class Initialized
+INFO - 2021-08-22 22:03:04 --> Language Class Initialized
+INFO - 2021-08-22 22:03:04 --> Loader Class Initialized
+INFO - 2021-08-22 22:03:04 --> Controller Class Initialized
+INFO - 2021-08-22 22:03:04 --> Database Driver Class Initialized
+INFO - 2021-08-22 22:03:04 --> Model "admin_modal" initialized
+INFO - 2021-08-22 22:03:04 --> Model "common_model" initialized
+INFO - 2021-08-22 22:03:04 --> Model "user_model" initialized
+INFO - 2021-08-22 22:03:04 --> Model "Notificationmodel" initialized
+INFO - 2021-08-22 22:03:04 --> Helper loaded: url_helper
+INFO - 2021-08-22 22:03:04 --> Helper loaded: date_helper
+INFO - 2021-08-22 22:03:04 --> Helper loaded: form_helper
+INFO - 2021-08-22 22:03:04 --> Helper loaded: string_helper
+INFO - 2021-08-22 22:03:04 --> Helper loaded: comman_helper
+INFO - 2021-08-22 22:03:04 --> Email Class Initialized
+INFO - 2021-08-22 22:03:04 --> Jquery Class Initialized
+INFO - 2021-08-22 22:03:04 --> Javascript Class Initialized and loaded. Driver used: jquery
+INFO - 2021-08-22 22:03:04 --> Session: Class initialized using 'files' driver.
+INFO - 2021-08-22 22:03:04 --> Upload Class Initialized
+DEBUG - 2021-08-22 22:03:04 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2021-08-22 22:03:04 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2021-08-22 22:03:04 --> Encryption Class Initialized
+DEBUG - 2021-08-22 22:03:04 --> Javascript class already loaded. Second attempt ignored.
+DEBUG - 2021-08-22 22:03:04 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2021-08-22 22:03:04 --> Upload class already loaded. Second attempt ignored.
+INFO - 2021-08-22 22:03:04 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-08-22 22:03:04 --> Pagination Class Initialized
+INFO - 2021-08-22 22:03:04 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/header.php
+INFO - 2021-08-22 22:03:04 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/udetails_new.php
+INFO - 2021-08-22 22:03:04 --> File loaded: /home/b0ll7bmn2fo9/public_html/diesel_stop/application/views/admin_new/footer.php
+INFO - 2021-08-22 22:03:04 --> Final output sent to browser
+DEBUG - 2021-08-22 22:03:04 --> Total execution time: 0.0756

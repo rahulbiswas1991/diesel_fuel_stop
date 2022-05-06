@@ -1,0 +1,109 @@
+
+body{margin: 0px; padding: 0px; background:#f4f4f4;}
+a:hover{text-decoration: none;}
+.login {width: 50%; margin: 0 auto; border: 1px solid #c2c2c2; height:460px; border-radius: 23px; position: absolute; left: 0; right: 0; top: 80px; bottom: 0;  text-align:center; padding:30px 0;}
+.input-icon-wrap {border: 1px solid #393939; display: flex; flex-direction: row; width: 70%; margin: 10px auto; }
+.input-with-icon {border: none; flex: 1; }
+.input-icon, .input-with-icon {padding: 10px; }
+.input-icon {background: #f4f4f4; margin: 9px; padding: 10px 20px !important; border-right: 1px solid #b2b2b2; }
+.login_logo {padding: 0 0 20px; }
+.input-icon-wrap input {background: #f4f4f4; width: 100%; padding:0px; color: #00ccff; font-size: 20px; text-transform: capitalize; }
+.textbox label {width: 100%; float: left; text-align: left; color:#1e1e1e!important; font-weight:normal; margin: 0; padding: 11px 1px 0; }
+.submit button {background: #f99d1b; border: 1px solid #f99d1b; color: #FFF; font-size: 15px; padding: 11px 50px; border-radius: 4px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; text-transform: uppercase; }
+.submit span {background: #393939; padding: 15px 16px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+.submit p {font-size: 15px; font-weight: normal; padding:11px 0 10px; }
+.submit {width: 100%; float: left; padding: 20px 0 0; }
+.submit a {color: #1e1e1e; font-size: 15px; margin: 0; padding: 0; text-decoration: none; text-transform: uppercase;}
+.submit h2 {font: 15px sans-serif; margin-top:10px; text-align: center; text-transform: uppercase; }
+.submit h2.background {position: relative; z-index: 1; }
+ .submit h2.background:before {border-top: 1px solid #939393; content: ""; margin: 0 auto; position: absolute; top: 50%; left: 0; right: 0; bottom: 0; width: 100%; z-index: -1; }
+.submit h2.background span {background: #f4f4f4; padding: 0 15px; }
+.submit h2.double:before {border-top: none; }
+.login_info ul {margin: 0; padding: 0; list-style: none; }
+
+.sign_up {width: 70%; margin: 0 auto; border: 1px solid #c2c2c2; /* display: inline-table; */ border-radius: 23px; /* position: absolute; */ left: 0; right: 0; top: 80px; bottom: 0; text-align: center; padding: 30px 0; height: 100%; }
+.clear {clear: both; }
+.login_info ul li {float: left; padding: 0 54px; }
+.login_info {width: 70%; margin: 20px auto; z-index: 999; position: relative; }
+.border_add {border-top: 1px solid #000; width: 100%; float: left; height: 4px; position: relative; top: -67px; }
+.login_info ul li a {background: #f4f4f4; padding: 0px 0px; color: #333; font-size: 15px; font-weight: 500; }
+.payment_outer {width: 100%; float: left; }
+.payment_details {width: 80%; display:inline-table; border: 1px solid #393939; margin: 40px auto; border-radius: 6px;}
+.payment_details h4 {text-align: left; padding: 20px 20px; margin: 0; font-size: 16px; color:#393939; }
+.white_tbl {background: #FFF; margin: 0px 20px; }
+
+.user_profile {width: 100%; float: left; }
+.user_profile .nav-tabs > li {width: 84%; text-align: left; margin: 0 0 0 40px; }
+.sideways {background: #f89c1c; }
+.user_profile .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{background:#FFF; border:0px!important; border-radius:0px!important; margin:0px!important; color:#333;}
+.user_profile .nav-tabs > li > a {color: #FFF; padding: 18px 20px; }
+.user_profile .nav-tabs > li > a:hover{background:#FFF; color:#333; border:0px!important; border-radius:0px!important; margin:0px!important;}
+.adjust_width {width: 90%; margin: 30px 0 10px; border-radius: 6px; }
+.adjust_width select {background: url(../img/dropdown.png); background-position: center right; background-repeat: no-repeat; width: 40%; float: left; padding: 0px; color: #00ccff; font-size: 20px; text-transform: capitalize; border: 0px; -moz-appearance: none; -webkit-appearance: none; margin: 0 10px 0 0; }
+.tabs{width: 90%; margin:0px auto; border:1px solid #f89c1c;}
+.padding_left {padding-left: 0; }
+.cancel a {background: #f99d1b; text-transform:uppercase; color: #FFF; font-size: 17px; padding: 10px 40px; border-radius: 30px; float: left; margin: 20px 40px 0; }
+.cancel a i {position: relative; font-size: 23px; left: 10px; top: 1px; }
+.radius button{border-radius: 34px;border-top-right-radius: 0px;border-bottom-right-radius: 0px; padding: 11px 90px;}
+.radius span {border-top-right-radius: 30px; border-bottom-right-radius: 30px; position: relative; top: -1px; padding: 15px 36px; }
+.half_width {width: 100%!important; float: left; margin: 30px 0 0 0px; border-radius:4px; }
+.bronz img {width: 100%; }
+.bronz {padding: 0 0 20px; }
+
+.country {width: 100%; float: left; padding:40px 0 40px 68px; background:#FFF;}
+.country select {background: url(../img/dropdown_2.png); background-position: center right; background-repeat: no-repeat; border: 1px solid #333; font-size: 15px; padding: 9px 19px; float: left; margin: 0 0 20px 0px; border-radius: 5px; -moz-appearance: none; -webkit-appearance: none;}
+.width50 {width: 43%; float: left; margin: 30px 26px 6px 0; border-radius: 4px; }
+.country .input-icon{background:#FFF;}
+.country input{background:#FFF;}
+header {background: #f7f7f7; box-shadow: 0 1px 4px #e2e2e2; padding: 10px 0; }
+
+.sidenav {height: 100%; width: 0; position: fixed; z-index: 1; top: 0; right:0; background-color: #111; overflow-x: hidden; transition: 0.5s; padding-top: 60px; }
+.sidenav a {padding: 8px 8px 8px 32px; text-decoration: none; font-size: 25px; color: #818181; display: block; transition: 0.3s; }
+.sidenav a:hover {color: #f1f1f1; }
+.sidenav .closebtn {position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px; }
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.copybg {background: #393939; margin: 20px 0 0; padding: 15px 0; }
+.copy_right h4 {font-size: 14px; color: #FFF; margin: 0; padding: 10px 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width:320px) and (max-width: 767px){
+.login{width: 90%;}	
+.input-icon-wrap input{font-size:15px;}
+.textbox label{font-size:12px;}
+
+.radius span{padding:15px 20px; top:0;}
+.radius button{padding: 11px 25px;}
+.login_info ul li{width: 100%;}
+
+
+}
+
+@media(min-width:768px) and (max-width: 991px){
+.login_info ul li {padding: 0 24px; }
+
+}
+
+
+@media(min-width:992px) and (max-width:1199px){
+.login_info ul li {padding: 0 41px; }
+
+}

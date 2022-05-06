@@ -1,0 +1,131 @@
+
+.hv-wrapper>.hv-item>.hv-item-parent .person img:hover+ .toolinfo:after { bottom: auto; top: -13px ;transform: rotate(180deg);}
+
+.toolinfo  {display: none;}
+
+.management-hierarchy .person {text-align: center; position: relative;}
+
+.nameImg {display: block; width: 100%; padding: 11px 14px; background-color:#41a2b4; color:#fff !important; border-radius:8px 8px 0 0 !important; }
+
+p.name a { color: #fff; text-decoration: none;}
+
+.nameImg img { border-radius: 50% !important; border: 2px solid #21b8e9; box-sizing: content-box; height: 50px; }
+
+.nameImg > span { text-align: center; margin-left: 13px; font-size: 14px; font-weight: 600; }
+
+/*.nameImg > span > span:nth-child(2) {
+    color: #21b8e9;
+}*/
+
+.UserInfo {
+    text-align:center;
+    border-radius:0 0 8px 8px  !important;
+    background: #fff;
+
+}
+
+.UserInfo h5 {font-size:12px; color:#6e6d6d; display:block;margin-bottom:0; font-weight:600; width:100%; margin-top:8px;}
+
+.UserInfo h6 {font-size:14px; color:#2d5bac;display:block; font-weight:bold; width:100%; margin-top:6px; margin-bottom:6px;}
+
+.userinfo_row { display: flex; justify-content: space-between; margin:0px; border:1px solid #41a2b4; flex-wrap: wrap; padding:0 !important;}
+
+.hv-wrapper>.hv-item>.hv-item-parent .person img:hover+ .toolinfo {top:90px;}
+
+.person img:hover+ .toolinfo {
+    display: block;
+    position: absolute;
+    left: -130px;
+    z-index: 99;
+    top: -234px;
+    width: 360px;
+    height: auto;
+    padding:10px;
+    border-radius:8px !important;
+    background: #6483bd; /* Old browsers */
+    background: -moz-linear-gradient(top, #6483bd 0%, #38689f 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #6483bd 0%,#38689f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #6483bd 0%,#38689f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6483bd', endColorstr='#38689f',GradientType=0 ); /* IE6-9 */
+    border-color:transparent;
+}
+
+.person img:hover+ .toolinfo:after {
+    background-image: url(../../../images/tooltip-arrow.png);
+    width: 26px;
+    height: 14px;
+    content: '';
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    top: auto;
+    left: 169px;
+    background-position: bottom;
+    bottom: -14px;
+}
+
+/* .hv-item-child.last-box .person img:hover+ .toolinfo {
+    right: -30px;
+    left: -327px;
+}
+
+.last-box .hv-item-parent .person img:hover+ .toolinfo {
+    left:-322px !important;
+}
+
+.last-box .hv-item-parent .person img:hover+ .toolinfo:after {
+    right:13px !important;
+}
+
+.last-box .person img:hover+ .toolinfo:after {
+    right: 8px;
+    left: auto;
+}
+
+.hv-item-children>:last-child {}
+*/
+
+/*
+.management-hierarchy .person > img.unpaid {
+    border: 2px solid #999;
+}
+
+ .person img.unpaid:hover+ .toolinfo {
+    display: none;
+}
+*/
+
+.management-hierarchy .person > p.name {background-color:#41a2b4 !important;}
+
+.management-hierarchy .person > img {border-radius:10px !important; border:0 !important;}
+
+.management-hierarchy .hv-container {padding:60px 50px 35px 60px !important; min-height:370px;}
+
+.hv-item-child img {height:60px !important;}
+
+.hv-wrapper .hv-item .hv-item-children .hv-item-child:before {height:16px; width:1px ; border-right:2px dashed #5a7cb5; background-color:transparent !important;}
+
+.hv-wrapper .hv-item .hv-item-parent:after {height:16px; width:1px ; border-right:2px dashed #5a7cb5; background-color:transparent !important;}
+
+.hv-wrapper .hv-item .hv-item-children .hv-item-child:not(:only-child):after {height:1px; border-top:2px dashed #5a7cb5; background-color:transparent !important;}
+
+.hv-item-children .hv-item-child .hv-item-parent:after {content: none; }
+
+.search-bar-box input {border:1px solid #c2cad8 !important;}
+.search-bar-box .btn-primary.outline img , .search-bar-box  .btn.btn-outline-success img {margin-bottom:4px;}
+.search-bar-box .btn-primary.outline, .search-bar-box  .btn.btn-outline-success {margin-left:2px; margin-right:2px;}
+.search-bar-box .btn-primary.outline:hover , .search-bar-box  .btn.btn-outline-success:hover {text-decoration: none;}
+.management-hierarchy .hv-wrapper {padding-bottom:37px !important;}
+.search-bar-box .orange-button {margin-left:10px !important; padding-left:20px; padding-right:20px;}
+
+
+
+
+@media (max-width:767px)
+{
+    .hv-item-children>:first-child .person img:hover+ .toolinfo {left:-60px !important;}
+    .hv-item-children>:first-child .person img:hover+ .toolinfo:after {left:99px !important;}
+}
+
+
+/* 30 July 2019 */
