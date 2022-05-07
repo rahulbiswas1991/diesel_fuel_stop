@@ -258,7 +258,6 @@ function randomPassword() {
     return implode($pass); //turn the array into a string
 }
 
-
 	public function add_newagent()
     {
         // $lead_data = array(
