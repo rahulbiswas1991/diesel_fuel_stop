@@ -41,20 +41,27 @@
                      </div>
                      <div class="card-body">
                         <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
-                        <form class="form-horizontal" action="ManageLeads" method="post">
+                        <form class="form-horizontal" action="upload_record_sheet" method="get">
 
                            <div class="row">
-                              <!-- Enter Company Name  -->
+
+                              <!-- Enter Colum Name  -->
+                              <div class="col-sm-6 col-md-6 col-lg-3">
+                                 <div class="form-group">
+                                    <label>Search Options</label>
+                                    <select class="form-control" name="search_by">
+                                       <option value="">All</option>
+                                       <option value="name">Name</option>
+                                    </select>
+                                 </div>
+                              </div>
+
+                              <!-- Enter search query  -->
                               <div class=" col-sm-6 col-md-6 col-lg-3">
                                  <div class="form-group">
-                                    <label>Enter Company Name</label>
+                                    <label>Enter Search Query</label>
                                     <div class="input-group">
-                                       <input type="text" class="form-control" placeholder="Search for..." name="query"
-                                          value="">
-                                       <!--<span class="input-group-btn">-->
-                                       <!--    <button class="btn blue" type="submit">Search</button>-->
-                                       <!--    <a class="btn red" href="http://localhost/diesel_stop/admin/ManageLeads"><i class="fa fa-refresh"></i> </a>-->
-                                       <!--</span>-->
+                                       <input type="text" class="form-control" placeholder="Search for..." name="query" value="">                                      
                                     </div>
                                     <!-- /input-group -->
                                  </div>
@@ -64,12 +71,12 @@
                               <div class="col-sm-6 col-md-6 col-lg-3">
                                  <div class="form-group" id="sandbox-container">
                                     <label>Select Date Range</label>
-                                    <div class="input-group input-large input-daterange" data-date="10/11/2020"
+                                    <div class="input-group input-large input-daterange"  data-date="10/11/2020"
                                        data-date-format="mm/dd/yyyy">
-                                       <input type="text" class="form-control" name="startdate" placeholder="Start Date"
+                                       <input type="text" class="form-control" autocomplete="off" name="startdate" placeholder="Start Date"
                                           value="">
                                        <span class="input-group-addon"> &nbsp To &nbsp </span>
-                                       <input type="text" class="form-control" name="enddate" placeholder="End Date"
+                                       <input type="text" class="form-control" autocomplete="off" name="enddate" placeholder="End Date"
                                           value="">
                                     </div>
                                     <!-- /input-group -->

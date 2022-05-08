@@ -235,7 +235,51 @@ class admin_modal extends CI_Model
     }
 	
 	
-	
+	public function fuel_management($search){
+        $this->db->select('*');
+        $this->db->from('diesel_fuel_records a');
+    
+        if (!empty($search)) {
+            
+            if (!empty($search['startdate']) && empty($search['enddate'])) {
+                $array = array('DATE(a.created_date) >=' => $search['startdate']);
+                $this->db->where($array);
+            }
+            if (!empty($search['enddate']) && empty($search['startdate'])) {
+                $array = array('DATE(a.created_date) <=' => $search['enddate']);
+                $this->db->where($array);
+            }
+            if (!empty($search['startdate']) && !empty($search['enddate'])) {
+                $array = array('DATE(a.created_date) >=' => $search['startdate'], 'DATE(a.created_date) <=' => $search['enddate']);
+                $this->db->where($array);
+            }
+            
+            // if (!empty($search['condition'])) {
+            //     $this->db->where('a.type =', $search['condition']);
+            // }
+            if (!empty($search['search_by'])) {
+                if ($search['search_by'] == 'name') {
+                    $where = "(a.carrier_name LIKE '" . $search['query'] . "%')";
+                    $this->db->where($where);
+                } 
+            } else {
+                if (!empty($search['query'])) {
+                    $where = " a.carrier_name LIKE '" . $search['query'] . "%'";
+                    $this->db->where($where);
+                }
+            }
+        }
+        $this->db->ORDER_BY('a.created_date', 'DESC');
+        if ($rowperpage != '') {
+            $this->db->limit($rowperpage, $rowno);
+        }
+        $query = $this->db->get();
+        if ($count) {
+            return $query->num_rows();
+        } else {
+            return $query->result_array();
+        }
+    }
 	
 	
 	

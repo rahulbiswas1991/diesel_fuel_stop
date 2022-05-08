@@ -262,8 +262,7 @@ function randomPassword() {
     {
         // $lead_data = array(
         //     'username' => trim($_POST['username']),
-        //     'email' => trim($_POST['email'])
-          
+        //     'email' => trim($_POST['email'])          
         // );
         
 //         $u_info = $this->user_model->get_data('users', ' AND email= "' . $email.'"', '*', 'full');
@@ -503,14 +502,43 @@ function randomPassword() {
 	
 	
 	public function upload_record_sheet() {
-       
+
+        $search = array();
         $roi_alldataa = array();
-        $roi_details = $this->common_model->get_data("diesel_fuel_records", "AND isactive=1","*", "full");
+        if (isset($_GET['query']) && !empty($_GET['query'])) {
+            $search['query'] = $_GET['query'];
+        }
+        
+        if (isset($_GET['startdate']) && !empty($_GET['startdate'])) {
+            $startdate = DateTime::createFromFormat("d/m/Y", $_GET['startdate']);
+            $startdate = $startdate->format('Y-m-d');
+            $search['startdate'] = $startdate;
+        }
+
+        if (isset($_GET['search_by']) && !empty($_GET['search_by'])) {
+            $search['search_by'] = $_GET['search_by'];
+        }
+
+        if (isset($_GET['enddate']) && !empty($_GET['enddate'])) {
+            $enddate = DateTime::createFromFormat("d/m/Y", $_GET['enddate']);
+            $enddate = $enddate->format('Y-m-d');
+            $search['enddate'] = $enddate;
+        }
+
+        if(count($search)>0){
+
+            $roi_details = $this->admin_modal->fuel_management($search);
+        } else {
+            $roi_details = $this->common_model->get_data("diesel_fuel_records", "AND isactive=1","*", "full");            
+            // echo $this->db->last_query(); die();
+            $data['roi_detailss'] = $roi_details;
+            //echo "<pre>"; print_r($data); die();
+        }  
         
         //echo $this->db->last_query(); die();
         $data['roi_detailss'] = $roi_details;
         //echo "<pre>"; print_r($data); die();
-   
+
         $this->load->view('admin_new/fuel_records_list.php',$data);
         $this->load->view('admin_new/footer.php');
         
