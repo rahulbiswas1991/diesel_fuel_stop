@@ -40,6 +40,67 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                </div>
                <div class="card-body">
                   <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
+                  <form class="form-horizontal" action="upload_record_sheet" method="get">
+
+                           <div class="row">
+
+                              <!-- Enter Colum Name  -->
+                              <div class="col-sm-6 col-md-6 col-lg-3">
+                                 <div class="form-group">
+                                    <label>Search Options</label>
+                                    <select class="form-control" name="search_by" value="<?= $_GET['search_by']?$_GET['search_by']:"" ?>">
+                                       <option value="">All</option>
+                                       <option value="name">Name</option>
+                                    </select>
+                                 </div>
+                              </div>
+
+                              <!-- Enter search query  -->
+                              <div class=" col-sm-6 col-md-6 col-lg-3">
+                                 <div class="form-group">
+                                    <label>Enter Search Query</label>
+                                    <div class="input-group">
+                                       <input type="text" class="form-control" placeholder="Search for..." name="query" value="<?= $_GET['query']?$_GET['query']:"" ?>">                                      
+                                    </div>
+                                    <!-- /input-group -->
+                                 </div>
+                              </div>
+
+                              <!-- date range  -->
+                              <div class="col-sm-6 col-md-6 col-lg-3">
+                                 <div class="form-group" id="sandbox-container">
+                                    <label>Select Date Range</label>
+                                    <div class="input-group input-large input-daterange"  data-date="10/11/2020"
+                                       data-date-format="mm/dd/yyyy">
+                                       <input type="text" class="form-control" autocomplete="off" name="startdate" placeholder="Start Date"
+                                          value="<?= $_GET['startdate']?$_GET['startdate']:"" ?>">
+                                       <span class="input-group-addon"> &nbsp To &nbsp </span>
+                                       <input type="text" class="form-control" autocomplete="off" name="enddate" placeholder="End Date"
+                                          value="<?= $_GET['enddate']?$_GET['enddate']:"" ?>">
+                                    </div>
+                                    <!-- /input-group -->
+                                 </div>
+                              </div>
+
+                              <!-- search btn  -->
+                              <div class=" col-sm-6 col-md-6 col-lg-3">
+                                 <div class="form-group">
+                                    <label>&nbsp; &nbsp;</label>
+                                    <div class="input-group">
+                                       <!--<input type="text" class="form-control" placeholder="Search for..." name="query" value="">-->
+                                       <span class="input-group-btn">
+                                          <button class="btn blue" style="background: #009688;height: 34px;"
+                                             type="submit">Search</button>
+                                          <a class="btn red" style="background: red; height: 34px;"
+                                             href="upload_record_sheet"><i class="fa fa-refresh"></i> </a>
+                                       </span>
+                                    </div>
+                                    <!-- /input-group -->
+                                 </div>
+                              </div>
+                           </div>
+
+                        </form>
                   <div class="btn-group d-flex" role="group">
                      <div class="buttonexport">
                         <a href="#" class="btn btn-add" data-toggle="modal" data-target="#adduser"><i class="fa fa-plus"></i> Import CSV File</a>
@@ -48,7 +109,7 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                   <div class="btn-group">
                      <button class="btn btn-exp btn-sm" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>
                      <ul class="dropdown-menu exp-drop" role="menu">
-                        <li>
+                        <!-- <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'json',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/json.png" width="24" alt="logo"> JSON</a>
                         </li>
@@ -59,28 +120,28 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                         <li><a href="#" onclick="$('#dataTableExample1').tableExport({type:'json',escape:'true'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/json.png" width="24" alt="logo"> JSON (with Escape)</a>
                         </li>
-                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-divider"></li> -->
                         <li><a href="#" onclick="$('#dataTableExample1').tableExport({type:'xml',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/xml.png" width="24" alt="logo"> XML</a>
                         </li>
-                        <li><a href="#" onclick="$('#dataTableExample1').tableExport({type:'sql'});">
+                        <!-- <li><a href="#" onclick="$('#dataTableExample1').tableExport({type:'sql'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/sql.png" width="24" alt="logo"> SQL</a>
                         </li>
-                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-divider"></li> -->
                         <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'csv',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/csv.png" width="24" alt="logo"> CSV</a>
                         </li>
-                        <li>
+                        <!-- <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'txt',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/txt.png" width="24" alt="logo"> TXT</a>
                         </li>
-                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-divider"></li> -->
                         <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'excel',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/xls.png" width="24" alt="logo"> XLS</a>
                         </li>
-                        <li>
+                        <!-- <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'doc',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/word.png" width="24" alt="logo"> Word</a>
                         </li>
@@ -96,7 +157,7 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                         <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/pdf.png" width="24" alt="logo"> PDF</a>
-                        </li>
+                        </li> -->
                      </ul>
                   </div>
                   <!-- ./Plugin content:powerpoint,txt,pdf,png,word,xl -->
@@ -116,21 +177,29 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                               <th>Fuel (Gallons)</th>
                               <th>Share (%)</th>
                               <th>Total Share</th>
-                              <th>Date</th>
+                              <th>Upload Date</th>
+                              <th>Month</th>
+                              <th>Year</th>
                            </tr>
                         </thead>
                         <tbody>
                            <?php $i = 1;
 
                            if (!empty($roi_detailss)) {
-                              foreach ($roi_detailss as $key => $roi) {
+                              $after_filter = array_filter($roi_detailss,function($data){
+                                 if(!empty($data['carrier_name'])){
+                                    return true;
+                                 }else{
+                                    return false;
+                                 }
+                              });
+                              foreach ($after_filter as $key => $roi) {
                                  //   echo "<pre>"; print_r($team['paid_status']); //die();
 
 
                            ?>
                                  <tr class="show_fuel_records" data-carrier="<?= $roi['carrier_name'] ?>" data-company="<?= $roi['company'] ?>" data-billing="<?= $roi['billing_card'] ?>" data-acct="<?= $roi['acct'] ?>" data-pfj="<?= $roi['pfj_ascend'] ?>" data-acctype="<?= $roi['acct_type'] ?>" data-fuel="<?= $roi['fuel_gallons'] ?>" data-share="<?= $roi['share_per'] ?>" data-totalshare="<?= $roi['total_share'] ?>" data-createddate="<?= $roi['created_date'] ?>">
-                                    <td><?= $i++;; ?></td>
-
+                                    <td><?= $i++; ?></td>
                                     <td><?= $roi['carrier_name'] ?> </td>
                                     <td> <?= $roi['company'] ?> </td>
                                     <td> <?= $roi['billing_card'] ?> </td>
@@ -141,7 +210,8 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                                     <td> <?= $roi['share_per'] ?> </td>
                                     <td> <?= $roi['total_share'] ?> </td>
                                     <td> <?= $roi['created_date'] ?></td>
-
+                                    <td> <?= $roi['month'] ?></td>
+                                    <td> <?= $roi['year'] ?></td>
                                  </tr>
                            <?php }
                            } ?>
@@ -216,8 +286,16 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                                  <input placeholder="totalshare" id="totalshare" name="totalshare" class="form-control" type="text" disabled />
                               </div>
                               <div class="col-md-6 form-group">
-                                 <label class="control-label">Date</label>
-                                 <input placeholder="createddate" id="createddate" name="createddate" class="form-control" type="text" disabled />
+                                 <label class="control-label">Upload Date</label>
+                                 <input placeholder="Upload date" id="createddate" name="createddate" class="form-control" type="text" disabled />
+                              </div>
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">Month</label>
+                                 <input placeholder="Month" id="month" name="month" class="form-control" type="text" disabled />
+                              </div>
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">Year</label>
+                                 <input placeholder="Year" id="year" name="year" class="form-control" type="text" disabled />
                               </div>
                               <!-- <div class="col-md-12 form-group user-form-group">
                                  <div class="float-right">
@@ -252,8 +330,15 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                            <div class="row">
                               <!-- Text input-->
                               <div class="col-md-6 form-group">
-                                 <label class="control-label">Excel File</label>
-                                 <input type="file" name="file" id="file" required accept=".xlsx" />
+                              <label class="control-label">Select Year: </label>   
+                              <select id="year" name="year" class = "btn btn-add btn-sm">
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                 </select>
+                                 <label class="control-label">Import Excel File:</label>
+                                 <input type="file" name="file"  id="file" required accept=".xlsx" />
                               </div>
 
                               <div class="col-md-12 form-group user-form-group">

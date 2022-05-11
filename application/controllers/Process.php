@@ -106,6 +106,7 @@ class Process extends CI_Controller
             'no_of_trucks' => trim($_POST['total_trucks']),
             'potential_gallons' => trim($_POST['potential_gallons']),
             'status' => trim($_POST['lead_status']),
+            'acct' => trim($_POST['account']),
              'complete_date' => date('Y-m-d H:i:s')
           
         );

@@ -2068,6 +2068,7 @@ $(".adlead_popup").click(function(e) {
                         $('#zip_code').val(data.data[0].lead_zip_code);
                         $('#total_trucks').val(data.data[0].lead_total_trucks);
                         $('#potential_gallons').val(data.data[0].lead_potential_gallons);
+                        $('#account').val(data.data[0].account);
                         
                     //    $('#status').val(data.data.status);
                         

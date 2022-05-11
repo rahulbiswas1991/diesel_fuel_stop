@@ -82,7 +82,7 @@ $path = base_url();
                         <select class="form-control" name="search_by">
                            <option value="">All</option>
                            <option <?= $searchby == 'name' ? 'selected="selected"' : ''; ?> value="name">Name</option>
-                           <option <?= $searchby == 'username' ? 'selected="selected"' : ''; ?> value="username">EMP ID</option>
+                           <!-- <option <?= $searchby == 'username' ? 'selected="selected"' : ''; ?> value="username">EMP ID</option> -->
                            <!--<option <?= $searchby == 'email' ? 'selected="selected"' : ''; ?> value="email">Email</option>-->
                            <!--<option <?= $searchby == 'mobile' ? 'selected="selected"' : ''; ?> value="mobile">Mobile</option>-->
                            <!-- <option>KYC Pending</option> -->
@@ -161,7 +161,7 @@ $path = base_url();
                   <div class="btn-group">
                      <button class="btn btn-exp btn-sm" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>
                      <ul class="dropdown-menu exp-drop" role="menu">
-                        <li>
+                        <!-- <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'json',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/json.png" width="24" alt="logo"> JSON</a>
                         </li>
@@ -188,12 +188,12 @@ $path = base_url();
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'txt',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/txt.png" width="24" alt="logo"> TXT</a>
                         </li>
-                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-divider"></li> -->
                         <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'excel',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/xls.png" width="24" alt="logo"> XLS</a>
                         </li>
-                        <li>
+                        <!-- <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'doc',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/word.png" width="24" alt="logo"> Word</a>
                         </li>
@@ -209,7 +209,7 @@ $path = base_url();
                         <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});">
                               <img src="<?= base_url() ?>assets_diesel/dist/img/pdf.png" width="24" alt="logo"> PDF</a>
-                        </li>
+                        </li> -->
                      </ul>
                   </div>
                   <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
@@ -231,6 +231,7 @@ $path = base_url();
                               <th>Zip Code</th>
                               <th>Potential Gallons</th>
                               <th>Description Field</th>
+                              <th>Account#</th>
                               <th style="width: 18%;">Lead Date / Updated Date</th>
                               <th style="width: 10%;">Status</th>
                               <th>Action</th>
@@ -273,6 +274,7 @@ $path = base_url();
                                  <td><?= $record['lead_zip_code'] ?></td>
                                  <td><?= $record['lead_potential_gallons'] ?></td>
                                  <td><?= $record['lead_description_field'] ?></td>
+                                 <td><?= $record['acct'] ?></td>
                                  <td><?= change_date_format($record['created_date'], 'd M,Y h:i:s')  ?>
                                     </br>
                                     <?= $cdate  ?>
@@ -365,6 +367,10 @@ $path = base_url();
                               <div class="col-md-6 form-group">
                                  <label class="control-label">potential gallons</label>
                                  <input placeholder="potential_gallons" id="potential_gallons" name="potential_gallons" class="form-control" type="text" required />
+                              </div>                              
+                              <div class="col-md-6 form-group">
+                                 <label class="control-label">Account#</label>
+                                 <input placeholder="Account" id="account" name="account" class="form-control" type="text" />
                               </div>                              
 
                               <div class="col-md-6 form-group">

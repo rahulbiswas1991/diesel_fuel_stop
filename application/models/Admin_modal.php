@@ -12,7 +12,90 @@ class admin_modal extends CI_Model
         $query = $this->db->get_where('admin', array('username' => $username, 'password' => md5($password)));
         return $query->row_array();
     }
-	
+    public function get_fuel_lead_data($search) {
+        // print_r($search);die;
+        $this->db->select('a.*,');
+        $this->db->join('leads b','a.acct = b.acct','left');
+        $this->db->join('users c','b.user_id = c.id','left');
+        // $this->db->ORDER_BY('a.carrier_name', 'ASC');
+        // $this->db->get('diesel_fuel_records a')->result_array();
+        // $this->db->select('*');
+        $this->db->from('diesel_fuel_records a');
+        if (!empty($search)) {
+            
+            if (!empty($search['startdate']) && empty($search['enddate'])) {
+                $array = array('DATE(a.created_date) >=' => $search['startdate']);
+                $this->db->where($array);
+            }
+            if (!empty($search['enddate']) && empty($search['startdate'])) {
+                $array = array('DATE(a.created_date) <=' => $search['enddate']);
+                $this->db->where($array);
+            }
+            if (!empty($search['startdate']) && !empty($search['enddate'])) {
+                $array = array('DATE(a.created_date) >=' => $search['startdate'], 'DATE(a.created_date) <=' => $search['enddate']);
+                $this->db->where($array);
+            }
+            
+            // if (!empty($search['condition'])) {
+            //     $this->db->where('a.type =', $search['condition']);
+            // }
+            if (!empty($search['search_by'])) {
+                if ($search['search_by'] == 'name') {
+                    $where = "(a.carrier_name LIKE '" . $search['query'] . "%')";
+                    $this->db->where($where);
+                    $this->db->ORDER_BY('carrier_name','ASC');
+                    return $this->db->get()->result_array();    
+                } 
+            } else {
+                if (!empty($search['query'])) {
+                    $where = " a.carrier_name LIKE '" . $search['query'] . "%'";
+                    $this->db->where($where);
+                }
+            }
+        }
+        $this->db->ORDER_BY('a.created_date', 'DESC');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+	public function fuel_management($search){
+        $this->db->select('*');
+        $this->db->from('diesel_fuel_records a');
+        if (!empty($search)) {
+            
+            if (!empty($search['startdate']) && empty($search['enddate'])) {
+                $array = array('DATE(a.created_date) >=' => $search['startdate']);
+                $this->db->where($array);
+            }
+            if (!empty($search['enddate']) && empty($search['startdate'])) {
+                $array = array('DATE(a.created_date) <=' => $search['enddate']);
+                $this->db->where($array);
+            }
+            if (!empty($search['startdate']) && !empty($search['enddate'])) {
+                $array = array('DATE(a.created_date) >=' => $search['startdate'], 'DATE(a.created_date) <=' => $search['enddate']);
+                $this->db->where($array);
+            }
+            
+            // if (!empty($search['condition'])) {
+            //     $this->db->where('a.type =', $search['condition']);
+            // }
+            if (!empty($search['search_by'])) {
+                if ($search['search_by'] == 'name') {
+                    $where = "(a.carrier_name LIKE '" . $search['query'] . "%')";
+                    $this->db->where($where);
+                    $this->db->ORDER_BY('carrier_name','ASC');
+                    return $this->db->get()->result_array();    
+                } 
+            } else {
+                if (!empty($search['query'])) {
+                    $where = " a.carrier_name LIKE '" . $search['query'] . "%'";
+                    $this->db->where($where);
+                }
+            }
+        }
+        $this->db->ORDER_BY('a.created_date', 'DESC');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
     //All data for admin manage user listing..
     public function countManageUserListing($search)
     {
@@ -58,120 +141,62 @@ class admin_modal extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
-    
-    
-         public function ManageUserListing($rowno = "", $rowperpage = "", $search = "")
+    public function get_all_users() {
+        $this->db->select('*');
+        $this->db->select('CONCAT(first_name,last_name) user_name');
+        return $this->db->get('users')->result_array();
+    }
+         public function ManageUserListing($search)
     {
-        //echo $rowno;
-        //echo $rowperpage;die;
-        #echo "okokook"; die();
-        $this->db->select('m.*,bd.name_in_bank, bd.bank_name,bd.account_number, bd.ifsc_code,CONCAT_WS(" ", ui.first_name, ui.last_name) as name,ui.profile_pic ,m.phone, bd.isactive as bank_status');
-        $this->db->from('users m');
-   
-        $this->db->join('(SELECT * FROM bank_details WHERE id in ( SELECT MAX(id) FROM bank_details group by user_id)) as bd', 'm.id=bd.user_id', 'LEFT');
-                   #vikash
-                   
-        
-        $this->db->join('user_information ui', 'm.id=ui.user_id', 'inner');
-    //    $this->db->join('user_information u', 'm.ref_by=u.user_id', 'LEFT');
-    //    $this->db->join('members p', 'm.ref_by=p.id', 'LEFT');
-    //    $this->db->join('countries c', 'ui.country_id=c.id', 'LEFT');
-    //    $this->db->join('designation d', 'm.designation=d.id', 'LEFT');
-        
-       # $this->db->join('packages_purchase pp', 'm.id=pp.user_id', 'LEFT');   #vikash
-       # $this->db->join('(SELECT * FROM packages_purchase WHERE id in ( SELECT MAX(id) FROM packages_purchase group by user_id) and isactive=1) as pp', 'm.id=pp.user_id', 'LEFT');  #vikash
-        
-    //    $this->db->join('(SELECT sum(price) as price, user_id FROM packages_purchase where status !=4 group by user_id ) as pp', 'm.id=pp.user_id', 'LEFT');  #vikash
-        
-        
-    //    $this->db->where(array('m.id!=' => 1, 'm.email_status' => 1)); 
-       // $this->db->limit(1, 10000);
-       
-        // $this->db->where(array('m.id > ' => 150000));
-        // $this->db->where(array('m.id <= ' => 160000));
-        
-        // echo $this->db->last_query();die; 
-        if (!empty($search)) {
-            if (!empty($search['condition'])) { 
-                if($search['condition'] ==2) {
-                    $this->db->where('m.isactive =', 0);
-                } 
-                 // else if($search['condition'] ==3) {  // approved
-                 
-                 
-                   // $filter = 2;
-                    // $this->db->where(array('kyc.address_id_status' => 2, 'kyc.national_id_status' => 2,  'kyc.pancard_status' => 2, 'bd.isactive' => 2));
-                // }
-                 // else if($search['condition'] ==4) {  //rejected
-                   // $filter = 4;
-                    // $where_kyc = '(kyc.address_id_status="3" or kyc.national_id_status = "3" or kyc.pancard_status = "3" or bd.isactive = "3")';
-                     // $this->db->where($where_kyc);
-                // }
-                 // else if($search['condition'] ==5) { //under verification // pending
-                    // $filter = 3;
-                    // $where_kyc = '(kyc.address_id_status="1" or kyc.national_id_status = "1" or kyc.pancard_status = "1" or bd.isactive = "1")';
-                     // $this->db->where($where_kyc);
-                // }
-                 // else if($search['condition'] ==6) { //Not submitted // 
-                 
-                   // $where_kyc = 'kyc.id IS NULL';
-                    // $this->db->where($where_kyc);
-                // } 
-			     // }else if($search['condition'] ==7) { //Paid User // 
-                 
-                   // $where_kyc = 'm.paid_status = 1';
-                    // $this->db->where($where_kyc);
-                // }  
-                 // else if($search['condition'] ==8) { //Un Paid User // 
-                 
-                   // $where_kyc = 'm.paid_status = 0';
-                    // $this->db->where($where_kyc);
-                // } 
-                else {
-                    $this->db->where('m.isactive =', $search['condition']);
-                }
-            } else {
-                #$this->db->where('m.isactive >=', 1);
-            }
 
+        $this->db->select('a.id as lead_id,a.created_date,a.complete_date as updated_date,a.contact_name as lead_name,a.company_name,a.phone_no as lead_phone,a.email as lead_mail, a.city as lead_city,a.state as lead_state, a.street as lead_street,a.no_of_trucks as lead_total_trucks,a.DOT_number as lead_dot_number,a.zip_code as lead_zip_code,a.potential_gallons as lead_potential_gallons,a.description_field as lead_description_field,a.status as lead_status, m.id as user_id,m.emp_id,m.email as user_mail,m.phone as user_phone,CONCAT_WS(" ", ui.first_name, ui.last_name) as user_name');
+        $this->db->join('users m', 'm.id=a.user_id', 'left');
+        $this->db->join('user_information ui', 'a.user_id=ui.user_id', 'left');
+        $this->db->from('leads a');
+        if (!empty($search)) {
+            
+            if (!empty($search['startdate']) && empty($search['enddate'])) {
+                $array = array('DATE(a.created_date) >=' => $search['startdate']);
+                $this->db->where($array);
+            }
+            if (!empty($search['enddate']) && empty($search['startdate'])) {
+                $array = array('DATE(a.created_date) <=' => $search['enddate']);
+                $this->db->where($array);
+            }
+            if (!empty($search['startdate']) && !empty($search['enddate'])) {
+                $array = array('DATE(a.created_date) >=' => $search['startdate'], 'DATE(a.created_date) <=' => $search['enddate']);
+                $this->db->where($array);
+            }
+            
+            // if (!empty($search['condition'])) {
+            //     $this->db->where('a.type =', $search['condition']);
+            // }
             if (!empty($search['search_by'])) {
                 if ($search['search_by'] == 'name') {
-                    $where = "(ui.first_name LIKE '%".$search['query']."%' OR ui.last_name LIKE '%".$search['query']."%')";
-                    //$where = "(strcmp(soundex(CONCAT(ui.first_name,' ', ui.last_name)), soundex('" . $search['query'] . "'))=0)";
+                    $where = "(a.contact_name LIKE '" . $search['query'] . "%')";
                     $this->db->where($where);
-                } elseif ($search['search_by'] == 'emp_id') {
-                    $this->db->like('m.emp_id', $search['query']);
-                } elseif ($search['search_by'] == 'email') {
-                    $this->db->like('m.email', $search['query']);
-                } elseif ($search['search_by'] == 'mobile') {
-                    $this->db->like('m.phone', $search['query']);
+                    $this->db->ORDER_BY('contact_name','ASC');
+                    return $this->db->get()->result_array();    
                 } 
-				// elseif ($search['search_by'] == 'pancard') {
-                    // $this->db->like('ui.pancard_no', $search['query']);
-                // } 
-				else {
-
-                }
             } else {
                 if (!empty($search['query'])) {
-                    $where = "(ui.first_name LIKE '%" . $search['query'] . "%' OR ui.last_name LIKE '%" . $search['query'] . "%' OR m.phone LIKE '%" . $search['query'] . "%' OR m.email LIKE '%" . $search['query'] . "%')";
+                    // echo "test";die;
+                    $where = " CONCAT_WS(\" \", `ui`.`first_name`, ui.last_name) LIKE '" . $search['query'] . "%'";
                     $this->db->where($where);
                 }
             }
         }
-        $this->db->ORDER_BY('m.id', 'DESC');
-        if ($rowperpage != '') {
-            $this->db->limit($rowperpage, $rowno);
-        }
+        $this->db->ORDER_BY('a.created_date', 'DESC');
         $query = $this->db->get();
-        
-       
-                return $query->result();
-           // }
-          //die();     
-     //  }
-       
-        return $query->result();    
+        return $query->result_array();
+    }
+         public function get_user_lead_data_by_id($id)
+    {
+        // print_r($id);die;
+        $this->db->select('a.id as lead_id,a.created_date,a.complete_date as updated_date,a.contact_name as lead_name,a.company_name,a.phone_no as lead_phone,a.email as lead_mail, a.city as lead_city,a.state as lead_state, a.street as lead_street,a.no_of_trucks as lead_total_trucks,a.DOT_number as lead_dot_number,a.zip_code as lead_zip_code,a.potential_gallons as lead_potential_gallons,a.description_field as lead_description_field,a.status as lead_status, m.id as user_id,m.emp_id,m.email as user_mail,m.phone as user_phone,CONCAT_WS(" ", ui.first_name, ui.last_name) as user_name');
+        $this->db->join('users m', 'm.id=a.user_id', 'left');
+        $this->db->join('user_information ui', 'a.user_id=ui.user_id', 'left');
+        return $this->db->get_where('leads a',array('a.id'=>$id))->row_array();
     }
     public function get_lead_by_id($id) {
         $this->db->select('a.id as lead_id,a.created_date,a.complete_date as updated_date,a.contact_name as lead_name,a.company_name,a.phone_no as lead_phone,a.email as lead_mail, a.city as lead_city,a.state as lead_state, a.street as lead_street,a.no_of_trucks as lead_total_trucks,a.DOT_number as lead_dot_number,a.zip_code as lead_zip_code,a.potential_gallons as lead_potential_gallons,a.description_field as lead_description_field,a.status as lead_status, m.id as user_id,m.emp_id,m.email as user_mail,m.phone as user_phone,CONCAT_WS(" ", ui.first_name, ui.last_name) as user_name');
@@ -181,7 +206,7 @@ class admin_modal extends CI_Model
     }
      public function Allleads($count = "", $rowno = "", $rowperpage = "", $search = "")
     {
-        $this->db->select('a.id as lead_id,a.created_date,a.complete_date as updated_date,a.contact_name as lead_name,a.company_name,a.phone_no as lead_phone,a.email as lead_mail, a.city as lead_city,a.state as lead_state, a.street as lead_street,a.no_of_trucks as lead_total_trucks,a.DOT_number as lead_dot_number,a.zip_code as lead_zip_code,a.potential_gallons as lead_potential_gallons,a.description_field as lead_description_field,a.status as lead_status, m.id,m.emp_id,m.email as user_mail,m.phone as user_phone,CONCAT_WS(" ", ui.first_name, ui.last_name) as user_name');
+        $this->db->select('a.id as lead_id,a.created_date,a.complete_date as updated_date,a.contact_name as lead_name,a.company_name,a.phone_no as lead_phone,a.email as lead_mail, a.city as lead_city,a.state as lead_state, a.street as lead_street,a.no_of_trucks as lead_total_trucks,a.DOT_number as lead_dot_number,a.zip_code as lead_zip_code,a.potential_gallons as lead_potential_gallons,a.description_field as lead_description_field,a.status as lead_status,a.acct, m.id,m.emp_id,m.email as user_mail,m.phone as user_phone,CONCAT_WS(" ", ui.first_name, ui.last_name) as user_name');
         $this->db->from('leads a');
         $this->db->join('users m', 'm.id=a.user_id', 'left');
         $this->db->join('user_information ui', 'a.user_id=ui.user_id', 'left');

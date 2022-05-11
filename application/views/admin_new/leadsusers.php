@@ -40,6 +40,67 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                </div>
                <div class="card-body">
                   <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
+                  <form class="form-horizontal" action="ManageLeadsByAgents" method="get">
+
+                           <div class="row">
+
+                              <!-- Enter Colum Name  -->
+                              <div class="col-sm-6 col-md-6 col-lg-3">
+                                 <div class="form-group">
+                                    <label>Search Options</label>
+                                    <select class="form-control" name="search_by" value="<?= $_GET['search_by']?$_GET['search_by']:"" ?>">
+                                       <option value="">All</option>
+                                       <option value="name">Name</option>
+                                    </select>
+                                 </div>
+                              </div>
+
+                              <!-- Enter search query  -->
+                              <div class=" col-sm-6 col-md-6 col-lg-3">
+                                 <div class="form-group">
+                                    <label>Enter Search Query</label>
+                                    <div class="input-group">
+                                       <input type="text" class="form-control" placeholder="Search for..." name="query" value="<?= $_GET['query']?$_GET['query']:"" ?>">                                      
+                                    </div>
+                                    <!-- /input-group -->
+                                 </div>
+                              </div>
+
+                              <!-- date range  -->
+                              <div class="col-sm-6 col-md-6 col-lg-3">
+                                 <div class="form-group" id="sandbox-container">
+                                    <label>Select Date Range</label>
+                                    <div class="input-group input-large input-daterange"  data-date="10/11/2020"
+                                       data-date-format="mm/dd/yyyy">
+                                       <input type="text" class="form-control" autocomplete="off" name="startdate" placeholder="Start Date"
+                                          value="<?= $_GET['startdate']?$_GET['startdate']:"" ?>">
+                                       <span class="input-group-addon"> &nbsp To &nbsp </span>
+                                       <input type="text" class="form-control" autocomplete="off" name="enddate" placeholder="End Date"
+                                          value="<?= $_GET['enddate']?$_GET['enddate']:"" ?>">
+                                    </div>
+                                    <!-- /input-group -->
+                                 </div>
+                              </div>
+
+                              <!-- search btn  -->
+                              <div class=" col-sm-6 col-md-6 col-lg-3">
+                                 <div class="form-group">
+                                    <label>&nbsp; &nbsp;</label>
+                                    <div class="input-group">
+                                       <!--<input type="text" class="form-control" placeholder="Search for..." name="query" value="">-->
+                                       <span class="input-group-btn">
+                                          <button class="btn blue" style="background: #009688;height: 34px;"
+                                             type="submit">Search</button>
+                                          <a class="btn red" style="background: red; height: 34px;"
+                                             href="ManageLeadsByAgents"><i class="fa fa-refresh"></i> </a>
+                                       </span>
+                                    </div>
+                                    <!-- /input-group -->
+                                 </div>
+                              </div>
+                           </div>
+
+                        </form>
                   <div class="btn-group d-flex" role="group">
                      <div class="buttonexport">
                         <a href="#" class="btn btn-add" data-toggle="modal" data-target="#addlead"><i class="fa fa-plus"></i> Import CSV File</a>
@@ -101,73 +162,29 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                      </ul>
                   </div>
 
-                  <div class="row">
-                     <div class="col-md-12">
-                        <!--<form class="form-horizontal">-->
-                        <form id="user_searchfm" action="<?= base_url() ?>admin/ManageUser" method="get">
-                           <div class="row">
-                              <div class="col-md-3">
-                                 <div class="form-group">
-                                    <label>Select Search Option</label>
-                                    <select class="form-control" name="search_by">
-                                       <option value="">All</option>
-                                       <option <?= $searchby == 'name' ? 'selected="selected"' : ''; ?> value="name">Name</option>
-                                       <option <?= $searchby == 'emp_id' ? 'selected="selected"' : ''; ?> value="emp_id">EMP ID</option>
-                                       <option <?= $searchby == 'email' ? 'selected="selected"' : ''; ?> value="email">Email</option>
-                                       <option <?= $searchby == 'mobile' ? 'selected="selected"' : ''; ?> value="mobile">Mobile</option>
-                                       <option <?= $searchby == 'pancard' ? 'selected="selected"' : ''; ?> value="pancard">Pancard</option>
-                                       <!-- <option>KYC Pending</option> -->
-                                    </select>
-                                 </div>
-                              </div>
-                              <div class="col-md-3">
-                                 <div class="form-group">
-                                    <label>Select Option</label>
-                                    <select class="form-control" name="condition">
-                                       <option value="">All</option>
-                                       <option <?= $condition == 1 ? 'selected="selected"' : ''; ?> value="1">Active Agents</option>
-                                       <option <?= $condition == 2 ? 'selected="selected"' : ''; ?> value="2">Deactive Agents</option>
-                                       <!--       <option <?= $condition == 3 ? 'selected="selected"' : ''; ?> value="3">KYC Approved</option>
-                                                            <option <?= $condition == 4 ? 'selected="selected"' : ''; ?> value="4">KYC Rejected</option>
-                                                            <option <?= $condition == 5 ? 'selected="selected"' : ''; ?> value="5">KYC Pending</option>
-                                                            <option <?= $condition == 6 ? 'selected="selected"' : ''; ?> value="6">KYC Not Submit</option>
-                                                            <option <?= $condition == 7 ? 'selected="selected"' : ''; ?> value="7">Paid Users</option>
-                                                            <option <?= $condition == 8 ? 'selected="selected"' : ''; ?> value="8">Unpaid Users</option> -->
-                                    </select>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <label>Enter your choice...</label>
-                                    <div class="input-group">
-                                       <input type="text" name="query" class="form-control" placeholder="Search for..." value="<?= trim($query) ?>">
-                                       <span class="input-group-btn">
-                                          <button class="btn blue" style="background: #009688;height: 34px;" type="submit">Search</button>
-                                          <a class="btn red" style="background: red; height: 34px;" href="<?= base_url() ?>admin/ManageUser"><i class="fa fa-refresh"></i> </a>
-                                          <!--<button class="btn blue" type="submit">Search</button>-->
-                                          <!--<a class="btn red" href="<?= base_url() ?>apcompundpower/ManageUser"><i class="fa fa-refresh"></i> </a>-->
-                                          <!--<button class="btn green excel_button" id="excel_button" type="button"><i class="fa fa-file-excel-o"></i> </button>-->
-                                       </span>
-                                    </div>
-                                    <!-- /input-group -->
-                                 </div>
-                              </div>
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-
                   <!-- ./Plugin content:powerpoint,txt,pdf,png,word,xl -->
                   <div class="table-responsive">
                      <table id="dataTableExample1" class="table table-bordered table-striped table-hover">
                         <thead class="back_table_color">
                            <tr class="info">
                               <th>#</th>
-                              <th>Photo</th>
-                              <th>Agent Name</th>
-                              <th>Emp ID</th>
-                              <th>Register on</th>
-                              <th>Status</th>
+                              <th>Agent's Name</th>
+                              <th>Agent's Mobile</th>
+                              <th>Agent's Email</th>
+                              <th style="width: 15%;">Lead Name</th>
+                              <th style="width: 17%;">Company Name</th>
+                              <th>DOT number</th>
+                              <th>Mobile</th>
+                              <th>Email</th>
+                              <th># of trucks</th>
+                              <th>Street</th>
+                              <th>City</th>
+                              <th>state</th>
+                              <th>Zip Code</th>
+                              <th>Potential Gallons</th>
+                              <th>Description Field</th>
+                              <th style="width: 18%;">Lead Date / Updated Date</th>
+                              <th style="width: 10%;">Status</th>
                               <th>Action</th>
                            </tr>
                         </thead>
@@ -175,7 +192,7 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                            <?php $sno = $row + 1;
                            foreach ($users as $obj) {
 
-                              //echo "<pre>"; print_r($users); die();
+                              // echo "<pre>"; print_r($obj); die();
 
 
                               if ($obj->profile_pic != "") {
@@ -190,16 +207,33 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                                  <input type="hidden" class="checkboxes usercheck" value="<?= $obj->id ?>" />
                                  <td><?= $sno++; ?></td>
 
-                                 <td><img src="<?= $src ?>" class="img-circle rounded-circle" alt="User Image" width="50" height="50"></td>
-                                 <td title="<?= $obj->email ?>"><?= $obj->name ?></td>
-                                 <td><?= $obj->emp_id ?></td>
-                                 <td><?= change_date_format($obj->created_date, "d-m-Y h:i:s") ?></td>
-                                 <td><a style="text-decoration:none;" href="javascript:void(0);" id="statusa_tag_<?= $obj->id ?>" class="status_up" data-status="<?= (($obj->isactive == 1) ? 2 : 1) ?>"><span id="status_span_<?= $obj->id ?>" class="label-default label label-<?= (($obj->isactive == 1) ? 'success' : 'danger') ?>"><?= (($obj->isactive == 1) ? 'Active' : 'In Active') ?></span></a>
-
+                                 <td><?= $obj['user_name'] ?>
+                                    <span class="label label-sm label-success label-mini tooltips" data-original-title="Username"> <?= $obj['emp_id'] ?> </span><br>
+                                    <!--<i class="fa fa-envelope"></i> <?= $obj['user_mail'] ?><br>-->
+                                    <i class="fa fa-phone"></i> <?= $obj['user_phone'] ?>
                                  </td>
-                                 <td>
-                                    <a href="<?php echo base_url() . 'admin/user-details/' . $obj->id ?>"><button type="button" class="btn btn-add btn-sm"><i class="fa fa-pencil"></i></button></a>
-                                    <button type="button" class="btn btn-danger btn-sm" id="delete_user" data-agent_id="<?= $obj->id ?>"><i class="fa fa-trash"></i> </button>
+                                 <td><?= $obj['user_phone'] ?></td>
+                                 <td><?= $obj['user_mail'] ?></td>
+                                 <td><?= $obj['lead_name'] ?></td>
+                                 <td><?= $obj['company_name'] ?></td>
+                                 <td><?= $obj['lead_dot_number'] ?></td>
+                                 <td><?= $obj['lead_phone'] ?></td>
+                                 <td><?= $obj['lead_mail'] ?></td>
+                                 <td><?= $obj['lead_total_trucks'] ?></td>
+                                 <td><?= $obj['lead_street'] ?></td>
+                                 <td><?= $obj['lead_city'] ?></td>
+                                 <td><?= $obj['lead_state'] ?></td>
+                                 <td><?= $obj['lead_zip_code'] ?></td>
+                                 <td><?= $obj['lead_potential_gallons'] ?></td>
+                                 <td><?= $obj['lead_description_field'] ?></td>
+                                 <td><?= change_date_format($obj['created_date'], 'd M,Y h:i:s')  ?>
+                                    </br>
+                                    <?= $cdate  ?>
+                                 </td>
+                                 <td><?= $sts ?></td>
+                                 <td style="width:18%">
+                                    <a href="<?php echo base_url() . 'admin/user_lead_details/' . $obj['lead_id'] ?>"><button type="button" class="btn btn-add btn-sm"><i class="fa fa-pencil"></i></button></a>
+                                    <button type="button" class="btn btn-danger btn-sm" id="delete_user" data-agent_id="<?= $obj['lead_id'] ?>"><i class="fa fa-trash"></i> </button>
                                  </td>
                               </tr>
                            <?php } ?>
@@ -279,7 +313,7 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                            <div class="row">
                               <!-- Text input-->
                               <div class="col-md-6 form-group">
-                                 <label class="control-label">Excel File</label>
+                                 <label class="control-label">Excel File</label>                                 
                                  <input type="file" name="file" id="file" required accept=".xlsx" />
                               </div>
 

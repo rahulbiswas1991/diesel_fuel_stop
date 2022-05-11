@@ -35,6 +35,16 @@ class common_model extends CI_Model
             return $query->row_array();
         }
     }
+    public function countAll() {
+        return $this->db->count_all("diesel_fuel_records");
+    }
+    public function get_fuel_data($limit, $start=0) {
+        $this->db->limit($limit,$start);
+        $where = 'carrier_name IS NOT NULL';
+        $data = $this->db->get_where("diesel_fuel_records", $where);
+        // print_r($this->db->last_query());die;
+        return $data->result_array();
+    }
     public function MetherWalletStatement($user_id)
     {
         $sql = 'SELECT a.id,a.mode,a.created_date,CONCAT_WS(" ",m.currency,a.amount) as amount,a.type, @b := round(@b + IF(a.type=1,a.amount,0) - IF(a.type=2,a.amount,0),2) AS balance, a.remarks,

@@ -411,6 +411,12 @@ $path = base_url();
                   </li>
                   
                   
+                   <li class=""  id="fuel_report">
+                     <a href="<?=base_url()?>admin/fuel_report"><i class="fa fa-shopping-bag"></i><span>Reports</span>
+                     <span class="pull-right-container">
+                     </span>
+                     </a>
+                  </li>
                    <li class=""  id="reward_points">
                      <a href="<?=base_url()?>admin/reward_points"><i class="fa fa-shopping-bag"></i><span>Rewards</span>
                      <span class="pull-right-container">
