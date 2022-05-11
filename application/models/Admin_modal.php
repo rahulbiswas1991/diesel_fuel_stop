@@ -234,7 +234,10 @@ class admin_modal extends CI_Model
         }
     }
 	
-	
+	public function get_all_data() {
+        $this->db->select('*');
+        return $this->db->get('diesel_fuel_records');
+    }
 	public function fuel_management($search){
         $this->db->select('*');
         $this->db->from('diesel_fuel_records a');
