@@ -35,6 +35,10 @@ class common_model extends CI_Model
             return $query->row_array();
         }
     }
+    public function get_user_id($emp_id) {
+        $this->db->select('id');
+        return $this->db->get_where('users',array('emp_id'=>$emp_id))->row_array();
+    }
     public function countAll() {
         return $this->db->count_all("diesel_fuel_records");
     }

@@ -149,7 +149,7 @@ class admin_modal extends CI_Model
          public function ManageUserListing($search)
     {
 
-        $this->db->select('a.id as lead_id,a.created_date,a.complete_date as updated_date,a.contact_name as lead_name,a.company_name,a.phone_no as lead_phone,a.email as lead_mail, a.city as lead_city,a.state as lead_state, a.street as lead_street,a.no_of_trucks as lead_total_trucks,a.DOT_number as lead_dot_number,a.zip_code as lead_zip_code,a.potential_gallons as lead_potential_gallons,a.description_field as lead_description_field,a.status as lead_status, m.id as user_id,m.emp_id,m.email as user_mail,m.phone as user_phone,CONCAT_WS(" ", ui.first_name, ui.last_name) as user_name');
+        $this->db->select('a.id as lead_id,a.created_date,a.complete_date as updated_date,a.contact_name as lead_name,a.company_name,a.phone_no as lead_phone,a.email as lead_mail, a.city as lead_city,a.state as lead_state, a.street as lead_street,a.no_of_trucks as lead_total_trucks,a.DOT_number as lead_dot_number,a.zip_code as lead_zip_code,a.potential_gallons as lead_potential_gallons,a.description_field as lead_description_field,a.status as lead_status,a.month,a.year, m.id as user_id,m.emp_id,m.email as user_mail,m.phone as user_phone,CONCAT_WS(" ", ui.first_name, ui.last_name) as user_name');
         $this->db->join('users m', 'm.id=a.user_id', 'left');
         $this->db->join('user_information ui', 'a.user_id=ui.user_id', 'left');
         $this->db->from('leads a');

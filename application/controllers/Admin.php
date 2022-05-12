@@ -721,6 +721,118 @@ class Admin extends Common
             redirect(base_url('recordsheet_upload'));
         }
     }
+    /*******Add by Rahul*******/
+    public function import_lead_from_sheet()
+    {
+
+        // $roi_details = $this->common_model->get_data("mannual_share_per", "AND status=1 order by id desc","*", "1");
+        $shareper = 0;
+        //echo "<pre>"; print_r($roi_details['share_percentage']); die();
+        // $mimes = array('application/vnd.ms-excel','text/plain','text/csv','text/tsv');
+        // if(in_array($_FILES['file']['type'],$mimes)){
+
+        $path = $_FILES["file"]["tmp_name"];
+        $object = PHPExcel_IOFactory::load($path);
+        foreach ($object->getWorksheetIterator() as $worksheet) {
+            // print_r($worksheet->getTitle());die;
+            $highestRow = $worksheet->getHighestRow();
+            $highestColumn = $worksheet->getHighestColumn(3, 2);
+            $i = 0;$j = 0;
+            for ($row = 2; $row <= $highestRow; $row++) {
+
+                $emp_id = $worksheet->getCellByColumnAndRow(0, $row)->getValue();
+                $lead_name = $worksheet->getCellByColumnAndRow(1, $row)->getValue();
+                $company_name = $worksheet->getCellByColumnAndRow(2, $row)->getValue();
+                $dot_number = $worksheet->getCellByColumnAndRow(3, $row)->getValue();
+                $mobile = $worksheet->getCellByColumnAndRow(4, $row)->getValue();
+                $email = $worksheet->getCellByColumnAndRow(5, $row)->getValue();
+                $numberOfTrucks = $worksheet->getCellByColumnAndRow(6, $row)->getValue();
+                $street = $worksheet->getCellByColumnAndRow(7, $row)->getValue();
+                $city = $worksheet->getCellByColumnAndRow(8, $row)->getValue();
+                $state = $worksheet->getCellByColumnAndRow(9, $row)->getValue();
+                $zip_code = $worksheet->getCellByColumnAndRow(10, $row)->getValue();
+                $potential_gallons = $worksheet->getCellByColumnAndRow(11, $row)->getValue();
+                $description_field = $worksheet->getCellByColumnAndRow(12, $row)->getValue();
+                $month = $worksheet->getTitle();
+                $checkdata = $this->common_model->get_data('leads', 'and contact_name="' . $lead_name . '" and company_name="' . $company_name . '" and phone_no="' . $mobile . '" and email="' . $email . '" and city="' . $city . '" and street="' . $street . '" and state="' . $state . '"and zip_code="' . $zip_code . '"and potential_gallons="' . $potential_gallons . '"and description_field="' . $description_field . '"and DOT_number="' . $dot_number . '"and no_of_trucks="' . $numberOfTrucks . '"', '*', 'full');
+                // print_r($this->db->last_query());die;
+                if (count($checkdata) > 0) {
+                } else {
+
+                    $user_id = $this->common_model->get_user_id($emp_id);
+                    // print_r($potential_gallons);die;
+                    if ($potential_gallons > 0) {
+                        $roi_details = $this->common_model->get_data("mannual_share_per", "AND status=1 AND user_id = (select id from users where emp_id = '".$emp_id."') order by id desc", "*", "1");
+                        // print_r($this->db->last_query());die;
+                        $shareper = $roi_details['share_percentage'];
+
+                        $total_share = ($potential_gallons * $shareper) / 100;
+                    } else {
+                        $total_share = 0;
+                    }
+
+
+                    $lead[$i]['user_id'] = $user_id['id'];
+                    $lead[$i]['contact_name'] = $lead_name;
+                    $lead[$i]['company_name'] = $company_name;
+                    $lead[$i]['DOT_number'] = $dot_number;
+                    $lead[$i]['phone_no'] = $mobile;
+                    $lead[$i]['email'] = $email;
+                    $lead[$i]['no_of_trucks'] = $numberOfTrucks;
+                    $lead[$i]['street'] = $street;
+                    $lead[$i]['city'] = $city;
+                    $lead[$i]['state'] = $state;
+                    $lead[$i]['zip_code'] = $zip_code;
+                    $lead[$i]['potential_gallons'] = $potential_gallons;
+                    $lead[$i]['description_field'] =  $description_field;
+                    $lead[$i]['isactive'] = 1;
+                    $lead[$i]['month'] = $month;
+                    $lead[$i]['year'] = $_POST['year'];
+                    $lead[$i]['created_date'] = date('Y-m-d H:i:s');
+                    $i++;
+
+
+
+                    if ($user_id > 0) {
+                        $fuel_share[$j]['user_id'] = $user_id['id'];
+                        $fuel_share[$j]['profit_type'] = 1;
+                        $fuel_share[$j]['reward_point'] = $total_share;
+                        $fuel_share[$j]['isactive'] = 1;
+                        $fuel_share[$j]['created_date'] = date('Y-m-d H:i:s');
+                    }
+                    $j++;
+
+                    // $rec++;
+                }
+            }
+        }
+
+        //  echo "<pre>"; print_r($lead); die();
+        //  echo "<pre>"; print_r($fuel_share); die();
+        if (count($lead) > 0) {
+            $roiCount = $this->common_model->insertBatch('leads', $lead);
+            if (count($fuel_share) > 0) {
+                $roiCountreward = $this->common_model->insertBatch('rewards', $fuel_share);
+            }
+            // print_r(base_url('recordsheet_upload'));die;
+            if ($roiCount) {
+                $this->session->set_flashdata('success', 'Sheet Upload Successfully'); //die();
+                redirect(base_url('admin/ManageLeadsByAgents'));
+            } else {
+                $this->session->set_flashdata('error', 'Please try again.');
+                redirect(base_url('recordsheet_upload'));
+            }
+        } else {
+            $this->session->set_flashdata('success', 'Make sure CSV File is correct ?'); //die();
+            redirect(base_url('recordsheet_upload'));
+        }
+
+        // } else {
+        //   $this->session->set_flashdata('error', 'Please Upload Only CSV file.');
+        //   redirect(base_url('recordsheet_upload'));
+        // } 
+
+    }
     public function importlead_sheet()
     {
         $shareper = 0;
@@ -737,8 +849,6 @@ class Admin extends Common
                 $emp_id = $worksheet->getCellByColumnAndRow(2, $row)->getValue();
 
                 $checkdata = $this->common_model->get_data('users');
-                print_r($checkdata);
-                die;
                 if (count($checkdata) > 0) {
                 } else {
                     $lead[$i]['photo'] = $photo;
