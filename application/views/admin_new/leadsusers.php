@@ -35,80 +35,73 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
             <div class="card lobicard" id="lobicard-custom-control" data-sortable="true">
                <div class="card-header">
                   <div class="card-title custom_title">
-                     <h4>Leadas Details</h4>
+                     <h4>Leads Details</h4>
                   </div>
                </div>
                <div class="card-body">
                   <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
                   <form class="form-horizontal" action="ManageLeadsByAgents" method="get">
 
-                           <div class="row">
+                     <div class="row">
 
-                              <!-- Enter Colum Name  -->
-                              <div class="col-sm-6 col-md-6 col-lg-3">
-                                 <div class="form-group">
-                                    <label>Search Options</label>
-                                    <select class="form-control" name="search_by" value="<?= $_GET['search_by']?$_GET['search_by']:"" ?>">
-                                       <option value="">All</option>
-                                       <option value="name">Name</option>
-                                    </select>
-                                 </div>
-                              </div>
-
-                              <!-- Enter search query  -->
-                              <div class=" col-sm-6 col-md-6 col-lg-3">
-                                 <div class="form-group">
-                                    <label>Enter Search Query</label>
-                                    <div class="input-group">
-                                       <input type="text" class="form-control" placeholder="Search for..." name="query" value="<?= $_GET['query']?$_GET['query']:"" ?>">                                      
-                                    </div>
-                                    <!-- /input-group -->
-                                 </div>
-                              </div>
-
-                              <!-- date range  -->
-                              <div class="col-sm-6 col-md-6 col-lg-3">
-                                 <div class="form-group" id="sandbox-container">
-                                    <label>Select Date Range</label>
-                                    <div class="input-group input-large input-daterange"  data-date="10/11/2020"
-                                       data-date-format="mm/dd/yyyy">
-                                       <input type="text" class="form-control" autocomplete="off" name="startdate" placeholder="Start Date"
-                                          value="<?= $_GET['startdate']?$_GET['startdate']:"" ?>">
-                                       <span class="input-group-addon"> &nbsp To &nbsp </span>
-                                       <input type="text" class="form-control" autocomplete="off" name="enddate" placeholder="End Date"
-                                          value="<?= $_GET['enddate']?$_GET['enddate']:"" ?>">
-                                    </div>
-                                    <!-- /input-group -->
-                                 </div>
-                              </div>
-
-                              <!-- search btn  -->
-                              <div class=" col-sm-6 col-md-6 col-lg-3">
-                                 <div class="form-group">
-                                    <label>&nbsp; &nbsp;</label>
-                                    <div class="input-group">
-                                       <!--<input type="text" class="form-control" placeholder="Search for..." name="query" value="">-->
-                                       <span class="input-group-btn">
-                                          <button class="btn blue" style="background: #009688;height: 34px;"
-                                             type="submit">Search</button>
-                                          <a class="btn red" style="background: red; height: 34px;"
-                                             href="ManageLeadsByAgents"><i class="fa fa-refresh"></i> </a>
-                                       </span>
-                                    </div>
-                                    <!-- /input-group -->
-                                 </div>
-                              </div>
+                        <!-- Enter Colum Name  -->
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                           <div class="form-group">
+                              <label>Search Options</label>
+                              <select class="form-control" name="search_by" value="<?= $_GET['search_by'] ? $_GET['search_by'] : "" ?>">
+                                 <option value="">All</option>
+                                 <option value="name">Name</option>
+                              </select>
                            </div>
+                        </div>
 
-                        </form>
-                  <div class="btn-group d-flex" role="group">
-                     <div class="buttonexport">
-                        <a href="#" class="btn btn-add" data-toggle="modal" data-target="#addlead"><i class="fa fa-plus"></i> Import CSV File</a>
+                        <!-- Enter search query  -->
+                        <div class=" col-sm-6 col-md-6 col-lg-3">
+                           <div class="form-group">
+                              <label>Enter Search Query</label>
+                              <div class="input-group">
+                                 <input type="text" class="form-control" placeholder="Search for..." name="query" value="<?= $_GET['query'] ? $_GET['query'] : "" ?>">
+                              </div>
+                              <!-- /input-group -->
+                           </div>
+                        </div>
+
+                        <!-- date range  -->
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                           <div class="form-group" id="sandbox-container">
+                              <label>Select Date Range</label>
+                              <div class="input-group input-large input-daterange" data-date="10/11/2020" data-date-format="mm/dd/yyyy">
+                                 <input type="text" class="form-control" autocomplete="off" name="startdate" placeholder="Start Date" value="<?= $_GET['startdate'] ? $_GET['startdate'] : "" ?>">
+                                 <span class="input-group-addon"> &nbsp To &nbsp </span>
+                                 <input type="text" class="form-control" autocomplete="off" name="enddate" placeholder="End Date" value="<?= $_GET['enddate'] ? $_GET['enddate'] : "" ?>">
+                              </div>
+                              <!-- /input-group -->
+                           </div>
+                        </div>
+
+                        <!-- search btn  -->
+                        <div class=" col-sm-6 col-md-6 col-lg-3">
+                           <div class="form-group">
+                              <label>&nbsp; &nbsp;</label>
+                              <div class="input-group">
+                                 <!--<input type="text" class="form-control" placeholder="Search for..." name="query" value="">-->
+                                 <span class="input-group-btn">
+                                    <button class="btn blue" style="background: #009688;height: 34px;" type="submit">Search</button>
+                                    <a class="btn red" style="background: red; height: 34px;" href="ManageLeadsByAgents"><i class="fa fa-refresh"></i> </a>
+                                 </span>
+                              </div>
+                              <!-- /input-group -->
+                           </div>
+                        </div>
                      </div>
-                  </div>
+
+                  </form>
 
                   <div class="btn-group">
-                     <button class="btn btn-exp btn-sm" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>
+                     <button class="btn btn-exp btn-sm" data-toggle="modal" data-target="#addlead"><i class="fa fa-plus"></i> Import CSV File</button> &nbsp
+                     <button class="btn btn-exp btn-sm" data-toggle="dropdown"><i class="fa fa-bars"></i> Export
+                        Table Data
+                     </button>
                      <ul class="dropdown-menu exp-drop" role="menu">
                         <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'json',escape:'false'});">
@@ -183,6 +176,8 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                               <th>Zip Code</th>
                               <th>Potential Gallons</th>
                               <th>Description Field</th>
+                              <th>Month</th>
+                              <th>Year</th>
                               <th style="width: 18%;">Lead Date / Updated Date</th>
                               <th style="width: 10%;">Status</th>
                               <th>Action</th>
@@ -226,6 +221,8 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                                  <td><?= $obj['lead_zip_code'] ?></td>
                                  <td><?= $obj['lead_potential_gallons'] ?></td>
                                  <td><?= $obj['lead_description_field'] ?></td>
+                                 <td><?= $obj['month'] ?></td>
+                                 <td><?= $obj['year'] ?></td>
                                  <td><?= change_date_format($obj['created_date'], 'd M,Y h:i:s')  ?>
                                     </br>
                                     <?= $cdate  ?>
@@ -309,28 +306,35 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                <div class="modal-body">
                   <div class="row">
                      <div class="col-md-12">
-                        <form action="<?= base_url() ?>admin/importlead_sheet" method="post" enctype="multipart/form-data">
+                        <form action="<?= base_url() ?>admin/import_lead_from_sheet" method="post" enctype="multipart/form-data">
                            <div class="row">
+                              <div class="col-sm-12 col-md-6 col-lg-6">
+                                 <div class="form-group">
+                                    <label>Select Import Data Year</label>
+                                    <select class="form-control" name="year" required>
+                                       <option value="">Select</option>
+                                       <option value="<?php echo date("Y"); ?>"><?php echo date("Y"); ?></option>
+                                       <option value="<?php echo date("Y", strtotime("-1 year")); ?>">
+                                          <?php echo date("Y", strtotime("-1 year")); ?></option>
+                                    </select>
+                                 </div>
+                              </div>
                               <!-- Text input-->
-                              <div class="col-md-6 form-group">
-                                 <label class="control-label">Excel File</label>                                 
+                              <div class="col-md-12 form-group">
+                                 <label class="control-label">Excel File</label><br>
                                  <input type="file" name="file" id="file" required accept=".xlsx" />
                               </div>
 
                               <div class="col-md-12 form-group user-form-group">
                                  <div class="float-right">
-                                    <!--<button type="button" class="btn btn-danger btn-sm">Cancel</button>-->
-                                    <button type="submit" class="btn btn-add btn-sm">Import</button>
-
+                                    <button type="submit" class="btn btn-primary">Import</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                  </div>
                               </div>
                            </div>
                         </form>
                      </div>
                   </div>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-danger float-left" data-dismiss="modal">Close</button>
                </div>
             </div>
             <!-- /.modal-content -->

@@ -42,72 +42,66 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                   <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
                   <form class="form-horizontal" action="upload_record_sheet" method="get">
 
-                           <div class="row">
+                     <div class="row">
 
-                              <!-- Enter Colum Name  -->
-                              <div class="col-sm-6 col-md-6 col-lg-3">
-                                 <div class="form-group">
-                                    <label>Search Options</label>
-                                    <select class="form-control" name="search_by" value="<?= $_GET['search_by']?$_GET['search_by']:"" ?>">
-                                       <option value="">All</option>
-                                       <option value="name">Name</option>
-                                    </select>
-                                 </div>
-                              </div>
-
-                              <!-- Enter search query  -->
-                              <div class=" col-sm-6 col-md-6 col-lg-3">
-                                 <div class="form-group">
-                                    <label>Enter Search Query</label>
-                                    <div class="input-group">
-                                       <input type="text" class="form-control" placeholder="Search for..." name="query" value="<?= $_GET['query']?$_GET['query']:"" ?>">                                      
-                                    </div>
-                                    <!-- /input-group -->
-                                 </div>
-                              </div>
-
-                              <!-- date range  -->
-                              <div class="col-sm-6 col-md-6 col-lg-3">
-                                 <div class="form-group" id="sandbox-container">
-                                    <label>Select Date Range</label>
-                                    <div class="input-group input-large input-daterange"  data-date="10/11/2020"
-                                       data-date-format="mm/dd/yyyy">
-                                       <input type="text" class="form-control" autocomplete="off" name="startdate" placeholder="Start Date"
-                                          value="<?= $_GET['startdate']?$_GET['startdate']:"" ?>">
-                                       <span class="input-group-addon"> &nbsp To &nbsp </span>
-                                       <input type="text" class="form-control" autocomplete="off" name="enddate" placeholder="End Date"
-                                          value="<?= $_GET['enddate']?$_GET['enddate']:"" ?>">
-                                    </div>
-                                    <!-- /input-group -->
-                                 </div>
-                              </div>
-
-                              <!-- search btn  -->
-                              <div class=" col-sm-6 col-md-6 col-lg-3">
-                                 <div class="form-group">
-                                    <label>&nbsp; &nbsp;</label>
-                                    <div class="input-group">
-                                       <!--<input type="text" class="form-control" placeholder="Search for..." name="query" value="">-->
-                                       <span class="input-group-btn">
-                                          <button class="btn blue" style="background: #009688;height: 34px;"
-                                             type="submit">Search</button>
-                                          <a class="btn red" style="background: red; height: 34px;"
-                                             href="upload_record_sheet"><i class="fa fa-refresh"></i> </a>
-                                       </span>
-                                    </div>
-                                    <!-- /input-group -->
-                                 </div>
-                              </div>
+                        <!-- Enter Colum Name  -->
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                           <div class="form-group">
+                              <label>Search Options</label>
+                              <select class="form-control" name="search_by" value="<?= $_GET['search_by'] ? $_GET['search_by'] : "" ?>">
+                                 <option value="">All</option>
+                                 <option value="name">Name</option>
+                              </select>
                            </div>
+                        </div>
 
-                        </form>
-                  <div class="btn-group d-flex" role="group">
-                     <div class="buttonexport">
-                        <a href="#" class="btn btn-add" data-toggle="modal" data-target="#adduser"><i class="fa fa-plus"></i> Import CSV File</a>
+                        <!-- Enter search query  -->
+                        <div class=" col-sm-6 col-md-6 col-lg-3">
+                           <div class="form-group">
+                              <label>Enter Search Query</label>
+                              <div class="input-group">
+                                 <input type="text" class="form-control" placeholder="Search for..." name="query" value="<?= $_GET['query'] ? $_GET['query'] : "" ?>">
+                              </div>
+                              <!-- /input-group -->
+                           </div>
+                        </div>
+
+                        <!-- date range  -->
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                           <div class="form-group" id="sandbox-container">
+                              <label>Select Date Range</label>
+                              <div class="input-group input-large input-daterange" data-date="10/11/2020" data-date-format="mm/dd/yyyy">
+                                 <input type="text" class="form-control" autocomplete="off" name="startdate" placeholder="Start Date" value="<?= $_GET['startdate'] ? $_GET['startdate'] : "" ?>">
+                                 <span class="input-group-addon"> &nbsp To &nbsp </span>
+                                 <input type="text" class="form-control" autocomplete="off" name="enddate" placeholder="End Date" value="<?= $_GET['enddate'] ? $_GET['enddate'] : "" ?>">
+                              </div>
+                              <!-- /input-group -->
+                           </div>
+                        </div>
+
+                        <!-- search btn  -->
+                        <div class=" col-sm-6 col-md-6 col-lg-3">
+                           <div class="form-group">
+                              <label>&nbsp; &nbsp;</label>
+                              <div class="input-group">
+                                 <!--<input type="text" class="form-control" placeholder="Search for..." name="query" value="">-->
+                                 <span class="input-group-btn">
+                                    <button class="btn blue" style="background: #009688;height: 34px;" type="submit">Search</button>
+                                    <a class="btn red" style="background: red; height: 34px;" href="upload_record_sheet"><i class="fa fa-refresh"></i> </a>
+                                 </span>
+                              </div>
+                              <!-- /input-group -->
+                           </div>
+                        </div>
                      </div>
-                  </div>
+
+                  </form>
+
                   <div class="btn-group">
-                     <button class="btn btn-exp btn-sm" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>
+                     <button class="btn btn-exp btn-sm" data-toggle="modal" data-target="#import_fuel_records"><i class="fa fa-plus"></i> Import CSV File</button> &nbsp
+                     <button class="btn btn-exp btn-sm" data-toggle="dropdown"><i class="fa fa-bars"></i> Export
+                        Table Data
+                     </button>
                      <ul class="dropdown-menu exp-drop" role="menu">
                         <!-- <li>
                            <a href="#" onclick="$('#dataTableExample1').tableExport({type:'json',escape:'false'});">
@@ -186,10 +180,10 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                            <?php $i = 1;
 
                            if (!empty($roi_detailss)) {
-                              $after_filter = array_filter($roi_detailss,function($data){
-                                 if(!empty($data['carrier_name'])){
+                              $after_filter = array_filter($roi_detailss, function ($data) {
+                                 if (!empty($data['carrier_name'])) {
                                     return true;
-                                 }else{
+                                 } else {
                                     return false;
                                  }
                               });
@@ -316,7 +310,7 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
          </div>
          <!-- /.modal-dialog -->
       </div>
-      <div class="modal fade" id="adduser" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal fade" id="import_fuel_records" tabindex="-1" role="dialog" aria-hidden="true">
          <div class="modal-dialog">
             <div class="modal-content">
                <div class="modal-header modal-header-primary">
@@ -328,33 +322,36 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                      <div class="col-md-12">
                         <form action="<?= base_url() ?>admin/importfuelrecord_sheet" method="post" enctype="multipart/form-data">
                            <div class="row">
+
+                              <div class="col-sm-12 col-md-6 col-lg-6">
+                                 <div class="form-group">
+                                    <label>Select Import Data Year</label>
+                                    <select class="form-control" name="search_by" required>
+                                       <option value="">Select</option>
+                                       <option value="<?php echo date("Y"); ?>"><?php echo date("Y"); ?></option>
+                                       <option value="<?php echo date("Y", strtotime("-1 year")); ?>">
+                                          <?php echo date("Y", strtotime("-1 year")); ?></option>
+                                    </select>
+                                 </div>
+                              </div>
+
                               <!-- Text input-->
-                              <div class="col-md-6 form-group">
-                              <label class="control-label">Select Year: </label>   
-                              <select id="year" name="year" class = "btn btn-add btn-sm">
-                                    <option value="2019">2019</option>
-                                    <option value="2020">2020</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2022">2022</option>
-                                 </select>
-                                 <label class="control-label">Import Excel File:</label>
-                                 <input type="file" name="file"  id="file" required accept=".xlsx" />
+                              <div class="col-md-12 mt-2 form-group">
+                                 <label class="control-label">Select Excel File</label><br>
+                                 <input type="file" name="file" id="file" required accept=".xlsx" />
                               </div>
 
                               <div class="col-md-12 form-group user-form-group">
                                  <div class="float-right">
                                     <!--<button type="button" class="btn btn-danger btn-sm">Cancel</button>-->
-                                    <button type="submit" class="btn btn-add btn-sm">Import</button>
-
+                                    <button type="submit" class="btn btn-primary">Import</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                  </div>
                               </div>
                            </div>
                         </form>
                      </div>
                   </div>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-danger float-left" data-dismiss="modal">Close</button>
                </div>
             </div>
             <!-- /.modal-content -->
