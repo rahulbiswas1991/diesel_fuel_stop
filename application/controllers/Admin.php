@@ -226,7 +226,7 @@ class Admin extends Common
         else {
             $data["results"] = $roi_alldataa;
         }
-        // print_r($data['results']); die();
+        // print_r($this->db->last_query()); die();
     $this->load->view('admin_new/fuel_report.php', $data);
     $this->load->view('admin_new/footer.php');
 }
@@ -755,7 +755,46 @@ class Admin extends Common
                 $description_field = $worksheet->getCellByColumnAndRow(12, $row)->getValue();
                 $month = $worksheet->getTitle();
                 $checkdata = $this->common_model->get_data('leads', 'and contact_name="' . $lead_name . '" and company_name="' . $company_name . '" and phone_no="' . $mobile . '" and email="' . $email . '" and city="' . $city . '" and street="' . $street . '" and state="' . $state . '"and zip_code="' . $zip_code . '"and potential_gallons="' . $potential_gallons . '"and description_field="' . $description_field . '"and DOT_number="' . $dot_number . '"and no_of_trucks="' . $numberOfTrucks . '"', '*', 'full');
-                // print_r($this->db->last_query());die;
+                // print_r($month);die;
+                $month_num = null;
+                    switch ($month) {
+                        case 'January':
+                            $month_num = 1;
+                            break;
+                        case 'February':
+                            $month_num = 2;
+                            break;
+                        case 'March':
+                            $month_num = 3;
+                            break;
+                        case 'April':
+                            $month_num = 4;
+                            break;
+                        case 'May':
+                            $month_num = 5;
+                            break;
+                        case 'June':
+                            $month_num = 6;
+                            break;
+                        case 'July':
+                            $month_num = 7;
+                            break;
+                        case 'August':
+                            $month_num = 8;
+                            break;
+                        case 'September':
+                            $month_num = 9;
+                            break;
+                        case 'October':
+                            $month_num = 10;
+                            break;
+                        case 'November':
+                            $month_num = 11;
+                            break;
+                        case 'December':
+                            $month_num = 12;
+                            break;
+                    }
                 if (count($checkdata) > 0) {
                 } else {
 
@@ -770,7 +809,7 @@ class Admin extends Common
                     } else {
                         $total_share = 0;
                     }
-
+                    
 
                     $lead[$i]['user_id'] = $user_id['id'];
                     $lead[$i]['contact_name'] = $lead_name;
@@ -788,11 +827,10 @@ class Admin extends Common
                     $lead[$i]['isactive'] = 1;
                     $lead[$i]['month'] = $month;
                     $lead[$i]['year'] = $_POST['year'];
+                    $lead[$i]['month_num'] = $month_num;
                     $lead[$i]['created_date'] = date('Y-m-d H:i:s');
                     $i++;
-
-
-
+                    
                     if ($user_id > 0) {
                         $fuel_share[$j]['user_id'] = $user_id['id'];
                         $fuel_share[$j]['profit_type'] = 1;
@@ -806,7 +844,7 @@ class Admin extends Common
                 }
             }
         }
-
+        
         //  echo "<pre>"; print_r($lead); die();
         //  echo "<pre>"; print_r($fuel_share); die();
         if (count($lead) > 0) {
@@ -889,6 +927,7 @@ class Admin extends Common
             // print_r($worksheet->getTitle());die;
             $highestRow = $worksheet->getHighestRow();
             $highestColumn = $worksheet->getHighestColumn(3, 2);
+            // $i=0;$j=0;
             for ($row = 2; $row <= $highestRow; $row++) {
 
                 $carrier_name = $worksheet->getCellByColumnAndRow(0, $row)->getValue();
@@ -902,6 +941,45 @@ class Admin extends Common
                 $year = $_POST['year'];
                 // print_r($month);die;
                 $checkdata = $this->common_model->get_data('diesel_fuel_records', 'and carrier_name="' . $carrier_name . '" and company="' . $company . '" and billing_card="' . $billing_card . '" and acct="' . $acct . '" and pfj_ascend="' . $pfj_ascend . '" and acct_type="' . $acct_type . '" and fuel_gallons="' . $fuel_gallons . '"', '*', 'full');
+                $month_num = null;
+                    switch ($month) {
+                        case 'January':
+                            $month_num = 1;
+                            break;
+                        case 'February':
+                            $month_num = 2;
+                            break;
+                        case 'March':
+                            $month_num = 3;
+                            break;
+                        case 'April':
+                            $month_num = 4;
+                            break;
+                        case 'May':
+                            $month_num = 5;
+                            break;
+                        case 'June':
+                            $month_num = 6;
+                            break;
+                        case 'July':
+                            $month_num = 7;
+                            break;
+                        case 'August':
+                            $month_num = 8;
+                            break;
+                        case 'September':
+                            $month_num = 9;
+                            break;
+                        case 'October':
+                            $month_num = 10;
+                            break;
+                        case 'November':
+                            $month_num = 11;
+                            break;
+                        case 'December':
+                            $month_num = 12;
+                            break;
+                    }
                 if (count($checkdata) > 0) {
                 } else {
 
@@ -928,6 +1006,7 @@ class Admin extends Common
                     $fuel[$i]['isactive'] = 1;
                     $fuel[$i]['month'] = $month;
                     $fuel[$i]['year'] = $year;
+                    $fuel[$i]['month_num'] = $month_num;
                     $fuel[$i]['created_date'] = date('Y-m-d H:i:s');
                     $i++;
 
@@ -951,9 +1030,9 @@ class Admin extends Common
         //  echo "<pre>"; print_r($fuel_share); die();
         if (count($fuel) > 0) {
             $roiCount = $this->common_model->insertBatch('diesel_fuel_records', $fuel);
-            if (count($fuel_share) > 0) {
-                $roiCountreward = $this->common_model->insertBatch('rewards', $fuel_share);
-            }
+            // if (count($fuel_share) > 0) {
+            //     $roiCountreward = $this->common_model->insertBatch('rewards', $fuel_share);
+            // }
 
             if ($roiCount) {
                 $this->session->set_flashdata('success', 'Sheet Upload Successfully'); //die();
