@@ -1,6 +1,6 @@
 <?php
 $this->load->helper('comman_helper');
-//echo '<pre>';print_r($users); die;
+// echo '<pre>';print_r($users); die;
 $searchby = '';
 $condition = '';
 $query = '';
@@ -87,7 +87,7 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                                  <!--<input type="text" class="form-control" placeholder="Search for..." name="query" value="">-->
                                  <span class="input-group-btn">
                                     <button class="btn blue" style="background: #009688;height: 34px;" type="submit">Search</button>
-                                    <a class="btn red" style="background: red; height: 34px;" href="upload_record_sheet"><i class="fa fa-refresh"></i> </a>
+                                    <a class="btn red" style="background: red; height: 34px;" href="admin/upload_record_sheet"><i class="fa fa-refresh"></i> </a>
                                  </span>
                               </div>
                               <!-- /input-group -->
@@ -326,7 +326,7 @@ if (isset($_GET['query']) && $_GET['query'] != '') {
                               <div class="col-sm-12 col-md-6 col-lg-6">
                                  <div class="form-group">
                                     <label>Select Import Data Year</label>
-                                    <select class="form-control" name="search_by" required>
+                                    <select class="form-control" name="year" required>
                                        <option value="">Select</option>
                                        <option value="<?php echo date("Y"); ?>"><?php echo date("Y"); ?></option>
                                        <option value="<?php echo date("Y", strtotime("-1 year")); ?>">

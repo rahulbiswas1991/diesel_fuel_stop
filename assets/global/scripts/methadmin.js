@@ -21,6 +21,7 @@ $(document).ready(function() {
         endDate: "today",
         todayHighlight: true,
         autoclose: true,
+        orientation: "bottom left"
     });
 
     //start select2 Functionality for select user for delete package
